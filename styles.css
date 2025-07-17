@@ -1,0 +1,226 @@
+/* 基本的なリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+header {
+    background-color: #e67e00;  /* Darker orange */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Mobile menu (hidden by default) */
+nav ul.mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e67e00;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+nav ul.mobile li {
+    margin: 10px 0;
+}
+
+nav ul.mobile li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Show mobile menu when hamburger icon is clicked */
+.hamburger.active + nav ul.mobile {
+    display: flex;
+}
+
+/* General styling for section and other elements */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e67e00;  /* Darker orange */
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    text-align: center;
+    background-color: #0073e6;
+    color: white;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+}
+
+.cta a {
+    text-decoration: none;
+    background-color: #e67e00;  /* Darker orange */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.oceanic-technology {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.oceanic-technology p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .cta {
+        padding: 20px 10px;
+    }
+
+    .cta h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide the main menu on mobile */
+    nav ul {
+        display: none;
+    }
+
+    /* Display mobile menu */
+    nav ul.mobile {
+        display: flex;
+    }
+}

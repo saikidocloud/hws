@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | AWSクラウド & AI トレーニングプログラム</title>
+
+    <style>
+        /* Basic styling for the form */
+        .contact-form {
+            width: 100%;
+            max-width: 600px;  /* Limits the form width on larger screens */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Main color: #e67e00 (Orange) */
+        button {
+            background-color: #e67e00;  /* Rich orange color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d45e00;  /* Slightly darker orange on hover */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .contact-form {
+                padding: 15px;
+            }
+
+            input, textarea, button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contact-form {
+                padding: 10px;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            input, textarea, button {
+                font-size: 12px;
+            }
+        }
+
+        /* General Styling for the Page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #e67e00;  /* Rich orange color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .cta {
+            background-color: #f7c08d;  /* Light orange for CTA */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .cta h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .cta p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #e67e00;  /* Rich orange color */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AWSクラウド & AI トレーニングプログラム</h1>
+        <p>次世代のテクノロジーリーダーを育成し、社会課題解決に貢献するスキルを習得</p>
+    </header>
+
+    <section>
+        <h2>お問い合わせ</h2>
+        <p>AWSクラウド & AI トレーニングプログラムに関するお問い合わせやご質問については、以下のフォームまたはメールでお気軽にご連絡ください。私たちのチームは、プログラムに関するご不明点を解決するお手伝いをさせていただきます。</p>
+
+        <div class="cta">
+            <h3>次のステップを踏み出す準備はできましたか？</h3>
+            <p>AWSクラウド & AIトレーニングプログラムに参加し、テクノロジーの未来を築きましょう！</p>
+
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">メールアドレス:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">お問い合わせ内容:</label>
+                    <textarea id="message" name="message" rows="1" required></textarea>
+                    
+                    <button type="submit" class="submit-btn">送信</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oceanic Technology AWSクラウド & AIトレーニングプログラム | <a href="mailto:info@awsprogram.com">お問い合わせ</a></p>
+        <p>次世代教育のためのクラウド＆AIソリューション</p>
+    </footer>
+
+</body>
+
+</html>

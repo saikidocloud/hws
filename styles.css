@@ -8,15 +8,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
     padding-top: 20px;
     padding-bottom: 40px;
 }
 
 header {
-    background-color: #e67e00;  /* Darker orange */
-    color: white;
+    background-color: #1e1e1e;
+    color: #ffcc00;
     padding: 20px 0;
     text-align: center;
     position: relative;
@@ -47,7 +47,7 @@ header p {
 .hamburger div {
     width: 100%;
     height: 4px;
-    background-color: white;
+    background-color: #ffcc00;
 }
 
 /* Navigation menu */
@@ -70,7 +70,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #ffcc00;
     font-size: 1.1rem;
 }
 
@@ -79,7 +79,7 @@ nav ul.mobile {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #e67e00;
+    background-color: #1e1e1e;
     position: absolute;
     top: 60px;
     width: 100%;
@@ -92,7 +92,7 @@ nav ul.mobile li {
 }
 
 nav ul.mobile li a {
-    color: white;
+    color: #ffcc00;
     font-size: 1.2rem;
 }
 
@@ -106,20 +106,21 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
     margin-top: 40px;
 }
 
 h2 {
     font-size: 2rem;
-    color: #e67e00;  /* Darker orange */
+    color: #ffcc00;
     margin-bottom: 20px;
 }
 
 h3 {
     font-size: 1.5rem;
     margin-top: 20px;
+    color: #ffcc00;
 }
 
 p {
@@ -152,8 +153,8 @@ ul {
 
 .cta a {
     text-decoration: none;
-    background-color: #e67e00;  /* Darker orange */
-    color: white;
+    background-color: #ffcc00;
+    color: #000;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -166,10 +167,12 @@ footer {
     margin-top: 40px;
     font-size: 0.9rem;
     color: #888;
+    background-color: #1a1a1a;
+    padding: 20px 10px;
 }
 
 footer a {
-    color: #0073e6;
+    color: #80cbc4;
     text-decoration: none;
 }
 
@@ -177,14 +180,14 @@ footer a {
     text-align: center;
     margin-top: 50px;
     font-size: 1rem;
-    color: #0073e6;
+    color: #80cbc4;
     font-weight: bold;
 }
 
 .oceanic-technology p {
     font-size: 1.2rem;
     margin-top: 10px;
-    color: #333;
+    color: #cccccc;
 }
 
 /* Mobile responsive adjustments */

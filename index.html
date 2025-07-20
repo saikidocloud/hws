@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWS Cloud ハンズオンブートキャンプ</title>
+  <title>AWS Cloud ハンズオン</title>
   <style>
     /* Reset & base */
     *, *::before, *::after {
@@ -115,6 +115,18 @@
       color: #0051a2;
       margin: 0 0.5rem;
     }
+
+    .session-detail {
+  display: none;
+  padding-top: 0.5rem;
+  color: #444;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+li.active .session-detail {
+  display: block;
+}
+
     /* Responsive */
     @media (max-width: 600px) {
       h1 {
@@ -133,10 +145,23 @@
       }
     }
   </style>
+
+  <script>
+  function toggleDetails(element) {
+    // Close other open sessions
+    document.querySelectorAll('.session-list li').forEach(li => {
+      if (li !== element) li.classList.remove('active');
+    });
+
+    // Toggle the clicked one
+    element.classList.toggle('active');
+  }
+</script>
+
 </head>
 <body>
 
-  <h1>🎓 AWS Cloud ハンズオンブートキャンプ</h1>
+  <h1>🎓 AWS Cloud ハンズオン</h1>
 
   <section>
     <h2>プログラム概要</h2>
@@ -163,17 +188,45 @@
 
     <section aria-label="セッション詳細">
       <h2>セッション詳細</h2>
-      <ul class="session-list">
-        <li><strong>7/26 (土) - Day 1:</strong> クラウド入門＆AWS概要</li>
-        <li><strong>7/27 (日) - Day 2:</strong> AWSコアサービス紹介</li>
-        <li><strong>7/28 (月) - Day 3:</strong> IAM & セキュリティ</li>
-        <li><strong>7/29 (火) - Day 4:</strong> 請求と料金</li>
-        <li><strong>7/30 (水) - Day 5:</strong> プロジェクト開始</li>
-        <li><strong>7/31 (木) - Day 6:</strong> モニタリング & 自動スケーリング</li>
-        <li><strong>8/1 (金) - Day 7:</strong> ラボレビュー</li>
-        <li><strong>8/2 (土) - Day 8:</strong> アーキテクチャベストプラクティス</li>
-        <li><strong>8/3 (日) - Day 9:</strong> 認定試験レビュー & クイズ</li>
-      </ul>
+<ul class="session-list">
+  <li onclick="toggleDetails(this)">
+    <strong>7/26 (土) - Day 1:</strong> クラウド入門＆AWS概要
+    <div class="session-detail">AWSとクラウドコンピューティングの基本を理解します。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>7/27 (日) - Day 2:</strong> AWSコアサービス紹介
+    <div class="session-detail">EC2やS3など主要サービスの役割と用途を学びます。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>7/28 (月) - Day 3:</strong> IAM & セキュリティ
+    <div class="session-detail">ユーザー管理とアクセス制御のベストプラクティスを習得します。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>7/29 (火) - Day 4:</strong> 請求と料金
+    <div class="session-detail">AWS料金体系とコスト最適化のポイントを解説します。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>7/30 (水) - Day 5:</strong> プロジェクト開始
+    <div class="session-detail">ハンズオンで基本構成のインフラを構築してみます。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>7/31 (木) - Day 6:</strong> モニタリング & 自動スケーリング
+    <div class="session-detail">CloudWatchとAuto Scalingによる運用自動化を体験します。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>8/1 (金) - Day 7:</strong> ラボレビュー
+    <div class="session-detail">これまでの演習内容を復習し、理解を深めます。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>8/2 (土) - Day 8:</strong> アーキテクチャベストプラクティス
+    <div class="session-detail">安全で拡張性のある設計手法を学びます。</div>
+  </li>
+  <li onclick="toggleDetails(this)">
+    <strong>8/3 (日) - Day 9:</strong> 認定試験レビュー & クイズ
+    <div class="session-detail">練習問題で知識を確認し試験対策を行います。</div>
+  </li>
+</ul>
+
     </section>
 
     <h2>ハイライト</h2>

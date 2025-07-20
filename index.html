@@ -1,86 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AWS Foundation Bootcamp</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS クラウド ハンズオンブートキャンプ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 2rem auto;
+      max-width: 900px;
+      color: #222;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      color: #004080;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 0.25rem;
+      background-color: #eef6f7;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      color: hsl(100, 57%, 45%);
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .special-offer {
+      background: #e6f0ff;
+      border: 2px solid #0077cc;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.6rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .calendar-header {
+      display: contents;
+    }
+    .calendar-header div {
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #0077cc;
+      color: #004080;
+      font-size: 0.95rem;
+    }
+    .calendar-cell {
+      min-height: 90px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      background: #fafafa;
+      text-align: center;
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .calendar-cell.empty {
+      background: #f0f0f0;
+      border: none;
+    }
+    .session-date {
+      font-weight: bold;
+      color: #004080;
+      margin-bottom: 0.2rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .session-date.disabled {
+      color: #999;
+      text-decoration: none;
+      cursor: default;
+    }
+    .session-info {
+      font-size: 0.75rem;
+      color: #333;
+      line-height: 1.2;
+      margin-top: 0.2rem;
+    }
+    .cta {
+      margin-top: 0.5rem;
+      padding: 0.2rem;
+      border-radius: 1px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .overview-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .overview-container ul {
+      flex: 1;
+      margin: 0;
+    }
+
+    .image-box {
+      width: 180px;
+      flex-shrink: 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      padding: 0.1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>🟧 AWS Foundation Bootcamp</h1>
-    <p>Flexible cloud training for beginners, students & professionals</p>
-  </header>
+<h1>🎓 AWS クラウド ハンズオンブートキャンプ</h1>
 
-  <section>
-    <h2>📅 Program Overview</h2>
+<section>
+  <h2>プログラム概要</h2>
+  <div class="overview-container">
     <ul>
-      <li><strong>Duration:</strong> 9 sessions (Flexible schedule for school students and working professionals)</li>
-      <li><strong>Delivery Mode:</strong> Online (Live sessions + hands-on labs)</li>
-      <li><strong>Language:</strong> Japanese / English (separate batches)</li>
-      <li><strong>Start Date:</strong> July 26th (Sat) ~ August 11th (Tue)</li>
-      <li><strong>Batch Timings:</strong><br>
-        #1: 10:00 AM – 12:00 PM<br>
-        #2: 1:00 PM – 3:00 PM<br>
-        #3: 7:00 PM – 9:00 PM
-      </li>
-      <li><strong>Schedule:</strong> Sessions held on alternate days, including weekdays</li>
+      <li><strong>期間：</strong>全9回</li>
+      <li><strong>形式：</strong>オンライン（ライブ授業 + ハンズオンラボ）</li>
+      <li><strong>言語：</strong>日本語 / 英語（別バッチ対応）</li>
+      <li><strong>開催日程：</strong>7月26日（土）～8月11日（火）</li>
+      <li><strong>時間帯：</strong>毎日3つの時間帯（午前・午後・夕方）</li>
     </ul>
+  </div>
 
-    <h3>🎁 Special Offer</h3>
-    <ul>
-      <li>★ <strong>18% Early Bird Discount</strong> (if enrolled and paid by <strong>July 23rd</strong>)</li>
-      <li><strong>Fee:</strong> ¥45,000 (all 9 sessions) or ¥15,000 × 3 installments</li>
-      <li><strong>For:</strong> Beginners, students, career switchers</li>
-    </ul>
+<div class="special-offer" aria-label="キャンペーン情報">
+  <h2>🎁 キャンペーン情報</h2>
+  <ul>
+    <li>★ <strong>18% 早期申込キャンペーン</strong>（<strong>7月25日</strong>までのお申込みとお支払いで適用）</li>
+    <li><strong>受講料：</strong><del>¥45,000</del> → <strong>¥36,900（税込）</strong></li>
+    <li><strong>対象：</strong>初心者、学生、キャリアチェンジャー</li>
+    <li><a href="#enrollment-section">▶ お申し込み・お支払いはこちら</a></li>
+  </ul>
+</div>
 
-    <h2>🔹 Highlights</h2>
-    <ul>
-      <li>Covers AWS Certified Cloud Practitioner Exam syllabus</li>
-      <li>Hands-on labs included (no extra cost)</li>
-      <li>Taught by AWS Certified Educator with real-world professional experience</li>
-      <li>Flexible timing & batch switch option</li>
-      <li>Includes projects tailored for school & working professionals</li>
-    </ul>
-
-    <h2>🗓 Session Plan</h2>
-    <p>Sessions held on alternate days, including weekdays</p>
-    <ul>
-      <li><strong>Day 1:</strong> Introduction to Cloud Computing & AWS Overview</li>
-      <li><strong>Day 2:</strong> Core AWS Services (Compute, Storage, Networking)</li>
-      <li><strong>Day 3:</strong> Identity & Access Management (IAM), Security Concepts</li>
-      <li><strong>Day 4:</strong> Billing, Pricing & AWS Free Tier Usage</li>
-      <li><strong>Day 5:</strong> Project work Kickoff</li>
-      <li><strong>Day 6:</strong> Monitoring, Auto Scaling & High Availability</li>
-      <li><strong>Day 7:</strong> Architecture Best Practices</li>
-      <li><strong>Day 8:</strong> Certification Overview, Review & Quiz</li>
-      <li><strong>Day 9:</strong> Additional topics, introduction to AWS and Gen AI</li>
-    </ul>
-
-    <h2>🔸 Certification Path</h2>
-    <p>This course helps you prepare for:</p>
-    <ul>
-      <li>🎯 <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank">AWS Certified Cloud Practitioner (CLF-C02)</a></li>
-    </ul>
-
-    <h2>🔗 Links</h2>
-    <ul>
-      <li>💳 <a href="#">Payment Link</a></li>
-      <li>🌐 <a href="#">More Details</a></li>
-    </ul>
-
-    <div class="cta">
-      <h3>Ready to start your cloud journey?</h3>
-      <p>Join the AWS Foundation Bootcamp today. Limited seats available!</p>
-      <a href="contact.html">Apply Now / お問い合わせ</a>
+  <h2>セッション詳細</h2>
+  <div class="calendar">
+    <div class="calendar-header">
+      <div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div><div>日</div>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 AWS Foundation Bootcamp | <a href="mailto:info@awsbootcamp.com">Contact Us</a></p>
-    <p>Empowering the next generation with cloud & AI skills</p>
-  </footer>
+    <!-- Week 1 -->
+    <div class="calendar-cell empty"></div><div class="calendar-cell empty"></div><div class="calendar-cell empty"></div>
+    <div class="calendar-cell empty"></div><div class="calendar-cell empty"></div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月26日</span>
+      <div class="session-info">Day 1: クラウド入門<br>AWS概要</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月27日</span>
+      <div class="session-info">Day 2: AWSコアサービス入門</div>
+    </div>
+
+    <!-- Week 2 -->
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月28日</span>
+      <div class="session-info">Day 3: IAMとセキュリティ</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月29日</span>
+      <div class="session-info">Day 4: 請求と価格体系</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月30日</span>
+      <div class="session-info">Day 5: プロジェクト開始</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">7月31日</span>
+      <div class="session-info">Day 6: 監視とオートスケーリング</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">8月1日</span>
+      <div class="session-info">Day 7: ラボ復習</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">8月2日</span>
+      <div class="session-info">Day 8: アーキテクチャのベストプラクティス</div>
+    </div>
+    <div class="calendar-cell">
+      <span class="session-date disabled">8月3日</span>
+      <div class="session-info">Day 9: 試験対策とクイズ</div>
+    </div>
+  </div>
+
+  <h2>ハイライト</h2>
+  <ul>
+    <li>AWS認定クラウドプラクティショナー試験対応カリキュラム</li>
+    <li>追加費用なしでハンズオンラボ付き</li>
+    <li>実務経験を持つAWS認定講師が指導</li>
+    <li>柔軟な時間帯とバッチ変更が可能</li>
+    <li>学生・社会人向けプロジェクト演習付き</li>
+  </ul>
+
+  <h2 id="enrollment-section">お申し込み・お支払い</h2>
+
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1RmogIPodS2QpZrsVVeWqIPP"
+  publishable-key="pk_test_51Rl5JcPodS2QpZrsmKihm31R248TMkSoSzD8JuEeCSabLFQXxRTDi3eqje05PFieS2Q5cvulmeQKvnNNrg2WrCvU00T9TTTgfE"
+>
+</stripe-buy-button>
+
+  <h2>認定パス</h2>
+  <ul>
+    <li>🎯 <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank">AWS認定クラウドプラクティショナー（CLF-C02）</a></li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Saikido Cloud. All rights reserved. |
+  <a href="index.html">ホーム</a> |
+  <a href="privacy.html">プライバシーポリシー</a> |
+  <a href="contact.html">お問い合わせ</a>
+</footer>
 
 </body>
 </html>

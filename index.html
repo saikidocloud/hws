@@ -3,214 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWSクラウドハンズオンブートキャンプ</title>
-
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+  <title>AWS Cloud ハンズオンブートキャンプ</title>
   <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Noto Sans JP', Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: "Noto Sans JP", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      margin: 0 auto;
+      max-width: 900px;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
+      padding: 1.5rem 1rem;
+    }
+    a {
+      color: #0051a2;
+      text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      outline: none;
     }
     h1, h2, h3 {
-      color: #004080;
+      color: #003366;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.03em;
     }
     h1 {
-      font-size: 2.4rem;
-      background-color: #eef6f7;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      color: hsl(100, 57%, 45%);
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-    h2 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
+      font-size: 2rem;
+      border-bottom: 3px solid #0051a2;
+      padding-bottom: 0.3rem;
     }
     ul {
       padding-left: 1.5rem;
+      margin-top: 0;
     }
-    .special-offer {
-      background: #e6f0ff;
-      border: 2px solid #0077cc;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-    .calendar-cell {
-      min-height: 90px;
-      background: #fafafa;
-      border-radius: 6px;
-      padding: 0.5rem;
-      border: 1px solid #ddd;
-      font-size: 0.9rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+    ul li {
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
       color: #333;
     }
-    .session-date {
-      font-weight: 700;
-      color: #004080;
-      margin-bottom: 0.25rem;
+    /* Special campaign box */
+    .special-offer {
+      background: #e8f0fc;
+      border: 1.5px solid #0051a2;
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #003366;
+      box-shadow: 0 1px 3px rgba(0,81,162,0.15);
+    }
+    .special-offer h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    /* Overview container */
+    .overview-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .overview-container ul {
+      flex: 1 1 380px;
+      margin: 0;
+    }
+    /* Session list */
+    .session-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .session-list li {
+      border-bottom: 1px solid #d1d1d6;
+      padding: 0.9rem 0;
+      font-size: 1rem;
+      color: #222;
+      transition: background-color 0.15s ease;
       cursor: default;
     }
-    .session-date.disabled {
-      color: #999;
+    .session-list li:last-child {
+      border-bottom: none;
     }
+    .session-list li strong {
+      color: #004080;
+      display: inline-block;
+      min-width: 120px;
+    }
+    .session-list li:hover {
+      background-color: #e8f0fc;
+    }
+    /* Footer */
     footer {
-      font-size: 0.9rem;
-      color: #666;
+      text-align: center;
       margin-top: 3rem;
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #6c6c6c;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      letter-spacing: 0.04em;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
+    footer a {
+      color: #0051a2;
+      margin: 0 0.5rem;
     }
-    a:hover {
-      text-decoration: underline;
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+        border-bottom-width: 2px;
+      }
+      .overview-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .overview-container ul {
+        flex: 1 1 100%;
+      }
+      .session-list li strong {
+        min-width: 100px;
+      }
     }
   </style>
-
-  <!-- Google Fonts Noto Sans JP -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
-
 </head>
 <body>
 
-<div class="container my-4">
-
-  <h1 class="text-center">🎓 AWSクラウドハンズオンブートキャンプ</h1>
+  <h1>🎓 AWS Cloud ハンズオンブートキャンプ</h1>
 
   <section>
     <h2>プログラム概要</h2>
-    <div class="row align-items-start">
-      <div class="col-md-8">
-        <ul class="list-unstyled">
-          <li><strong>期間：</strong>9回セッション（学生・社会人向け柔軟なスケジュール）</li>
-          <li><strong>配信方法：</strong>オンライン（ライブセッション＋ラボ）</li>
-          <li><strong>言語：</strong>日本語 / 英語（別々のバッチ）</li>
-          <li><strong>開催期間：</strong>7月26日（土）〜8月11日（火）</li>
-          <li><strong>時間帯：</strong>毎日3バッチ、午前、午後、夕方（ゆうがた）</li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <div class="border rounded shadow-sm p-2 bg-white">
-          <img src="your-image.jpg" alt="AWS Cloud Bootcamp" class="img-fluid rounded" />
-        </div>
-      </div>
+    <div class="overview-container">
+      <ul>
+        <li><strong>期間:</strong> 全9回 (学生・社会人向けに柔軟スケジュール対応)</li>
+        <li><strong>配信方法:</strong> オンライン（ライブ＋ラボ）</li>
+        <li><strong>言語:</strong> 日本語 / 英語（別バッチ）</li>
+        <li><strong>開催日:</strong> 7月26日(土) ～ 8月11日(火)</li>
+        <li><strong>時間帯:</strong> 1日3回（朝・午後・夕方）</li>
+      </ul>
     </div>
 
     <div class="special-offer" aria-label="キャンペーン">
       <h2>🎁 キャンペーン</h2>
       <ul>
-        <li>★ <strong>18% 割引価格</strong> （7月25日までの申込み＆支払い）</li>
-        <li><strong>料金：</strong>¥45,000（9回セッションすべて）- 18% 
-          <br /><a href="https://payment.example.com/enroll" target="_blank">申込み・支払いへ進む</a>
+        <li>★ <strong>18% 早割キャンペーン価格</strong> （7月25日までの申込＆支払い完了の方対象）</li>
+        <li><strong>価格:</strong> ¥45,000 [全9回] - 18% 割引<br>
+          <a href="#enrollment-section">申し込み・支払いはこちら</a>
         </li>
-        <li><strong>対象：</strong>初心者、学生、キャリアチェンジャー</li>
+        <li><strong>対象:</strong> 初心者、学生、キャリアチェンジ歓迎</li>
       </ul>
     </div>
 
-    <h2>セッション詳細</h2>
-
-    <div class="row text-center" role="grid" aria-label="セッション日カレンダー">
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">月</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">火</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">水</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">木</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">金</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">土</div>
-      <div class="col border-bottom border-primary fw-bold text-primary py-2">日</div>
-
-      <!-- Empty cells for alignment -->
-      <div class="col py-3 bg-light border-0"></div>
-      <div class="col py-3 bg-light border-0"></div>
-      <div class="col py-3 bg-light border-0"></div>
-      <div class="col py-3 bg-light border-0"></div>
-      <div class="col py-3 bg-light border-0"></div>
-
-      <!-- Dates -->
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/26</div>
-        <div>Day 1: クラウド入門<br>＆ AWS概要</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/27</div>
-        <div>Day 2: AWSコアサービス入門</div>
-      </div>
-
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/28</div>
-        <div>Day 3: IAM & セキュリティ</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/29</div>
-        <div>Day 4: 請求 & 価格設定</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/30</div>
-        <div>Day 5: プロジェクトキックオフ</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">7/31</div>
-        <div>Day 6: 監視 & オートスケーリング</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">8/1</div>
-        <div>Day 7: ラボレビュー</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">8/2</div>
-        <div>Day 8: アーキテクチャ<br>ベストプラクティス</div>
-      </div>
-      <div class="col calendar-cell">
-        <div class="session-date disabled">8/3</div>
-        <div>Day 9: 認定レビュー & クイズ</div>
-      </div>
-    </div>
+    <section aria-label="セッション詳細">
+      <h2>セッション詳細</h2>
+      <ul class="session-list">
+        <li><strong>7/26 (土) - Day 1:</strong> クラウド入門＆AWS概要</li>
+        <li><strong>7/27 (日) - Day 2:</strong> AWSコアサービス紹介</li>
+        <li><strong>7/28 (月) - Day 3:</strong> IAM & セキュリティ</li>
+        <li><strong>7/29 (火) - Day 4:</strong> 請求と料金</li>
+        <li><strong>7/30 (水) - Day 5:</strong> プロジェクト開始</li>
+        <li><strong>7/31 (木) - Day 6:</strong> モニタリング & 自動スケーリング</li>
+        <li><strong>8/1 (金) - Day 7:</strong> ラボレビュー</li>
+        <li><strong>8/2 (土) - Day 8:</strong> アーキテクチャベストプラクティス</li>
+        <li><strong>8/3 (日) - Day 9:</strong> 認定試験レビュー & クイズ</li>
+      </ul>
+    </section>
 
     <h2>ハイライト</h2>
     <ul>
-      <li>AWS認定クラウドプラクティショナー試験の内容をカバー</li>
-      <li>ラボ込み（追加費用なし）</li>
-      <li>実務経験豊富なAWS認定講師が担当</li>
-      <li>時間帯の柔軟性 & バッチ変更可能</li>
+      <li>AWS認定クラウドプラクティショナー試験カバー</li>
+      <li>ラボ実習付き（追加費用なし）</li>
+      <li>経験豊富なAWS認定インストラクターによる指導</li>
+      <li>柔軟な時間帯＆バッチ切替可能</li>
       <li>学生・社会人向けプロジェクト含む</li>
     </ul>
 
-    <h2>申込みと支払い</h2>
-    <div id="enrollment-section"></div>
-
+    <h2 id="enrollment-section">申し込み・支払い</h2>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <stripe-buy-button
       buy-button-id="buy_btn_1RmnOqPodS2QpZrsi39HkQaX"
       publishable-key="pk_test_51Rl5JcPodS2QpZrsmKihm31R248TMkSoSzD8JuEeCSabLFQXxRTDi3eqje05PFieS2Q5cvulmeQKvnNNrg2WrCvU00T9TTTgfE"
     ></stripe-buy-button>
 
-    <h2>認定資格パス</h2>
+    <h2>認定資格の道筋</h2>
     <ul>
       <li>🎯 <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">AWS認定クラウドプラクティショナー (CLF-C02)</a></li>
     </ul>
   </section>
 
-</div>
-
-<footer class="text-center mt-5 mb-3 text-muted">
-  &copy; 2025 Saikido Cloud. All rights reserved. |
-  <a href="index.html">ホーム</a> |
-  <a href="privacy.html">プライバシーポリシー</a> |
-  <a href="contact.html">お問い合わせ</a>
-</footer>
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer>
+    &copy; 2025 Saikido Cloud. All rights reserved. |
+    <a href="index.html">ホーム</a> |
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </footer>
 
 </body>
 </html>

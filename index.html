@@ -119,15 +119,15 @@
     }
 
     .session-detail {
-  display: none;
-  padding-top: 0.5rem;
-  color: #444;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-li.active .session-detail {
-  display: block;
-}
+      display: none;
+      padding-top: 0.5rem;
+      color: #444;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    li.active .session-detail {
+      display: block;
+    }
 
     /* Responsive */
     @media (max-width: 600px) {
@@ -146,19 +146,56 @@ li.active .session-detail {
         min-width: 100px;
       }
     }
+
+    /* Enrollment form styles */
+    form#enrollForm label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    form#enrollForm input,
+    form#enrollForm select,
+    form#enrollForm textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    form#enrollForm button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.2rem;
+      font-size: 1.1rem;
+      background-color: #0051a2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form#enrollForm button:hover {
+      background-color: #003d7a;
+    }
+    #thanksMessage {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: green;
+      display: none;
+    }
   </style>
 
   <script>
-  function toggleDetails(element) {
-    // Close other open sessions
-    document.querySelectorAll('.session-list li').forEach(li => {
-      if (li !== element) li.classList.remove('active');
-    });
-
-    // Toggle the clicked one
-    element.classList.toggle('active');
-  }
-</script>
+    function toggleDetails(element) {
+      // Close other open sessions
+      document.querySelectorAll('.session-list li').forEach(li => {
+        if (li !== element) li.classList.remove('active');
+      });
+      // Toggle the clicked one
+      element.classList.toggle('active');
+    }
+  </script>
 
 </head>
 <body>
@@ -166,119 +203,142 @@ li.active .session-detail {
   <h1>🎓 AWS Cloud ハンズオン</h1>
 
   <section aria-label="イメージビジュアル">
-
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-    <img src="ot_top.jpg"
-         alt="Data Center" 
-         style="width: 100%;  border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
-         loading="lazy">
-
-  </div>
-</section>
-
-<section class="hero-section">
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h2>概要</h2>
-      <p>このコースは、クラウド初心者を対象に、AWSの基礎から実践的なラボ演習までを網羅した全9回のオンライン講座です。<br>
-      ライブ講義と実践形式を組み合わせ、短期間でクラウドの理解と操作スキルを習得します。</p>
-
-      <h2>目的</h2>
-      <p>参加者がAWSの主要サービスと設計原則を体系的に理解し、クラウドプラクティショナー認定試験に合格できるレベルまでスキルを高めることを目指します。</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <img src="ot_top.jpg"
+           alt="Data Center" 
+           style="width: 100%;  border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+           loading="lazy">
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h2>概要</h2>
+        <p>このコースは、クラウド初心者を対象に、AWSの基礎から実践的なラボ演習までを網羅した全9回のオンライン講座です。<br>
+        ライブ講義と実践形式を組み合わせ、短期間でクラウドの理解と操作スキルを習得します。</p>
 
-    <h2>プログラム概要</h2>
-<div class="overview-container">
-  <ul>
-    <li><strong>全体構成:</strong> 全9セッションで構成</li>
-    <li><strong>実施形式:</strong> オンライン配信（ライブ講義＋ラボ演習）</li>
-    <li><strong>対応言語:</strong> 日本語および英語（バッチ別）</li>
-    <li><strong>開催期間:</strong> 7月26日(土) 〜 8月11日(火)</li>
-    <li><strong>配信スケジュール:</strong> 1日3回開催（午前・午後・夕方）※参加者は1日1枠を選択</li>
-  </ul>
-</div>
-
-    <div class="special-offer" aria-label="キャンペーン">
-      <h2>🎁 キャンペーン</h2>
-      <ul>
-        <li>★ <strong>18% 早割キャンペーン価格</strong> （7月25日までの申込＆支払い完了の方対象）</li>
-        <li><strong>価格:</strong> ¥45,000 [全9回] - 18% 割引<br>
-          <a href="#enrollment-section">申し込み・支払いはこちら</a>
-        </li>
-      </ul>
+        <h2>目的</h2>
+        <p>参加者がAWSの主要サービスと設計原則を体系的に理解し、クラウドプラクティショナー認定試験に合格できるレベルまでスキルを高めることを目指します。</p>
+      </div>
     </div>
+  </section>
 
-    <section aria-label="セッション詳細">
-      <h2>セッション詳細</h2>
-<ul class="session-list">
-  <li onclick="toggleDetails(this)">
-    <strong>7/26 (土) - Day 1:</strong> クラウド入門＆AWS概要
-    <div class="session-detail">AWSとクラウドコンピューティングの基本を理解します。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>7/27 (日) - Day 2:</strong> AWSコアサービス紹介
-    <div class="session-detail">EC2やS3など主要サービスの役割と用途を学びます。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>7/28 (月) - Day 3:</strong> IAM & セキュリティ
-    <div class="session-detail">ユーザー管理とアクセス制御のベストプラクティスを習得します。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>7/29 (火) - Day 4:</strong> 請求と料金
-    <div class="session-detail">AWS料金体系とコスト最適化のポイントを解説します。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>7/30 (水) - Day 5:</strong> プロジェクト開始
-    <div class="session-detail">ハンズオンで基本構成のインフラを構築してみます。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>7/31 (木) - Day 6:</strong> モニタリング & 自動スケーリング
-    <div class="session-detail">CloudWatchとAuto Scalingによる運用自動化を体験します。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>8/1 (金) - Day 7:</strong> ラボレビュー
-    <div class="session-detail">これまでの演習内容を復習し、理解を深めます。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>8/2 (土) - Day 8:</strong> アーキテクチャベストプラクティス
-    <div class="session-detail">安全で拡張性のある設計手法を学びます。</div>
-  </li>
-  <li onclick="toggleDetails(this)">
-    <strong>8/3 (日) - Day 9:</strong> 認定試験レビュー & クイズ
-    <div class="session-detail">練習問題で知識を確認し試験対策を行います。</div>
-  </li>
-</ul>
-
-    </section>
-
-    <h2>ハイライト</h2>
+  <h2>プログラム概要</h2>
+  <div class="overview-container">
     <ul>
-      <li>AWS認定クラウドプラクティショナー試験カバー</li>
-      <li>ラボ実習付き（追加費用なし）</li>
-      <li>経験豊富なAWS認定インストラクターによる指導</li>
-      <li>柔軟な時間帯＆バッチ切替可能</li>
+      <li><strong>全体構成:</strong> 全9セッションで構成</li>
+      <li><strong>実施形式:</strong> オンライン配信（ライブ講義＋ラボ演習）</li>
+      <li><strong>対応言語:</strong> 日本語および英語（バッチ別）</li>
+      <li><strong>開催期間:</strong> 7月26日(土) 〜 8月11日(火)</li>
+      <li><strong>配信スケジュール:</strong> 1日3回開催（午前・午後・夕方）※参加者は1日1枠を選択</li>
     </ul>
+  </div>
 
-    <h2 id="enrollment-section">申し込み・支払い</h2>
-<p>以下のフォームから受講登録をお願いします。</p>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgJGadJ0D_aibPBePgekZ90Hx9fNbz1svZ5jEU1K3q7OC_hQ/viewform?embedded=true" width="640" height="1218" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
-    <h2>認定資格の道筋</h2>
+  <div class="special-offer" aria-label="キャンペーン">
+    <h2>🎁 キャンペーン</h2>
     <ul>
-      <li>🎯 <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">AWS認定クラウドプラクティショナー (CLF-C02)</a></li>
+      <li>★ <strong>18% 早割キャンペーン価格</strong> （7月25日までの申込＆支払い完了の方対象）</li>
+      <li><strong>価格:</strong> ¥45,000 [全9回] - 18% 割引<br></li>
+    </ul>
+  </div>
+
+  <section aria-label="セッション詳細">
+    <h2>セッション詳細</h2>
+    <ul class="session-list">
+      <li onclick="toggleDetails(this)">
+        <strong>7/26 (土) - Day 1:</strong> クラウド入門＆AWS概要
+        <div class="session-detail">AWSとクラウドコンピューティングの基本を理解します。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>7/27 (日) - Day 2:</strong> AWSコアサービス紹介
+        <div class="session-detail">EC2やS3など主要サービスの役割と用途を学びます。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>7/28 (月) - Day 3:</strong> IAM & セキュリティ
+        <div class="session-detail">ユーザー管理とアクセス制御のベストプラクティスを習得します。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>7/29 (火) - Day 4:</strong> 請求と料金
+        <div class="session-detail">AWS料金体系とコスト最適化のポイントを解説します。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>7/30 (水) - Day 5:</strong> プロジェクト開始
+        <div class="session-detail">ハンズオンで基本構成のインフラを構築してみます。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>7/31 (木) - Day 6:</strong> モニタリング & 自動スケーリング
+        <div class="session-detail">CloudWatchとAuto Scalingによる運用自動化を体験します。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>8/1 (金) - Day 7:</strong> ラボレビュー
+        <div class="session-detail">これまでの演習内容を復習し、理解を深めます。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>8/2 (土) - Day 8:</strong> アーキテクチャベストプラクティス
+        <div class="session-detail">安全で拡張性のある設計手法を学びます。</div>
+      </li>
+      <li onclick="toggleDetails(this)">
+        <strong>8/3 (日) - Day 9:</strong> 認定試験レビュー & クイズ
+        <div class="session-detail">練習問題で知識を確認し試験対策を行います。</div>
+      </li>
     </ul>
   </section>
 
-  <footer>
-    &copy; 2025 Saikido Cloud. All rights reserved. |
-    <a href="index.html">ホーム</a> |
-    <a href="privacy.html">プライバシーポリシー</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </footer>
+
+<h2 id="enrollment-section">申し込み・支払い</h2>
+<p>以下のフォームから受講登録をお願いします。</p>
+<p style="font-size:0.9rem; color:#555;">
+  ※ご登録いただいたメールアドレス宛に、<strong>お支払い方法、セッション詳細、そして
+  コースへのアクセスに関するご案内</strong>を追って送信いたします。
+</p>
+
+<form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycbxqAsYKTpWzTUbiFLHPVVqvSFNvdq-f4aaubet5OIkaB5McpIGOic-_NxtmliDX2ZLS/exec">
+  <label for="name">お名前 <span aria-hidden="true">*</span></label>
+  <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
+
+  <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+  <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
+
+  <label for="session">参加希望時間帯 <span aria-hidden="true">*</span></label>
+  <select id="session" name="entry.2233445566" required>
+    <option value="">選択してください</option>
+    <option value="午前 10:00時 ~ 12:00時">午前 10:00時 ~ 12:00時</option>
+    <option value="午後 14:00時 ~ 16:00時">午後 14:00時 ~ 16:00時</option>
+    <option value="午後 19:00時 ~ 21:00時">午後 19:00時 ~ 21:00時</option>
+  </select>
+
+  <button type="submit">申し込む</button>
+</form>
+
+<div id="thanksMessage" role="alert" aria-live="polite" style="display:none;">
+  🎉 ご登録ありがとうございました！確認メールをお送りします。
+</div>
+
+<script>
+  document.getElementById('enrollForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+    const url = form.action;
+
+    fetch(url, {
+      method: 'POST',
+      body: data
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('thanksMessage').style.display = 'block';
+      } else {
+        alert("送信に失敗しました。もう一度お試しください。");
+      }
+    }).catch(err => {
+      console.error("Error:", err);
+      alert("送信エラーが発生しました。");
+    });
+  });
+</script>
 
 </body>
 </html>

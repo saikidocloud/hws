@@ -7,182 +7,71 @@
 
   <title>AWS Cloud ハンズオン</title>
   <style>
-    /* Reset & base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
     body {
-      font-family: "Noto Sans JP", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: #f5f5f7;
-      margin: 0 auto;
-      max-width: 900px;
-      color: #222;
-      line-height: 1.7;
-      padding: 1.5rem 1rem;
-    }
-    a {
-      color: #0051a2;
-      text-decoration: none;
-    }
-    a:hover, a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    h1, h2, h3 {
-      color: #003366;
-      font-weight: 700;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.03em;
-    }
-    h1 {
-      font-size: 2rem;
-      border-bottom: 3px solid #0051a2;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-      margin-top: 0;
-    }
-    ul li {
-      margin-bottom: 0.7rem;
-      font-size: 1rem;
+      font-family: "Noto Sans JP", serif;
+      background: #fff;
       color: #333;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+      line-height: 1.6;
     }
-    /* Special campaign box */
-    .special-offer {
-      background: #e8f0fc;
-      border: 1.5px solid #0051a2;
-      border-radius: 6px;
-      padding: 1.2rem 1.5rem;
-      margin-top: 1.5rem;
-      margin-bottom: 2rem;
-      font-size: 1rem;
-      color: #003366;
-      box-shadow: 0 1px 3px rgba(0,81,162,0.15);
-    }
-    .special-offer h2 {
-      margin-top: 0;
-      font-size: 1.3rem;
-    }
-    /* Overview container */
-    .overview-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-    .overview-container ul {
-      flex: 1 1 380px;
-      margin: 0;
-    }
-    /* Session list */
-    .session-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .session-list li {
-      border-bottom: 1px solid #d1d1d6;
-      padding: 0.9rem 0;
-      font-size: 1rem;
-      color: #222;
-      transition: background-color 0.15s ease;
-      cursor: default;
-    }
-    .session-list li:last-child {
-      border-bottom: none;
-    }
-    .session-list li strong {
-      color: #004080;
-      display: inline-block;
-      min-width: 120px;
-    }
-    .session-list li:hover {
-      background-color: #e8f0fc;
-    }
-    /* Footer */
-    footer {
-      text-align: center;
-      margin-top: 3rem;
+    h1, h2 {
+      color: #111;
+      border-bottom: 2px solid #666;
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: #6c6c6c;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-      letter-spacing: 0.04em;
+      font-weight: 700;
     }
-    footer a {
-      color: #0051a2;
-      margin: 0 0.5rem;
-    }
-
-    .session-detail {
-      display: none;
-      padding-top: 0.5rem;
+    p, label {
+      margin-bottom: 1rem;
       color: #444;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
     }
-    li.active .session-detail {
-      display: block;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.6rem;
-        border-bottom-width: 2px;
-      }
-      .overview-container {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .overview-container ul {
-        flex: 1 1 100%;
-      }
-      .session-list li strong {
-        min-width: 100px;
-      }
-    }
-
-    /* Enrollment form styles */
-    form#enrollForm label {
-      display: block;
-      margin-top: 1rem;
+    label {
       font-weight: 600;
+      display: block;
     }
-    form#enrollForm input,
-    form#enrollForm select,
-    form#enrollForm textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+    input, select, button {
       font-size: 1rem;
       font-family: inherit;
-      box-sizing: border-box;
     }
-    form#enrollForm button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.2rem;
-      font-size: 1.1rem;
-      background-color: #0051a2;
-      color: white;
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      margin-top: 0.25rem;
+    }
+    button {
+      background: #333;
+      color: #fff;
       border: none;
-      border-radius: 4px;
+      padding: 0.75rem 1.5rem;
       cursor: pointer;
+      margin-top: 1rem;
     }
-    form#enrollForm button:hover {
-      background-color: #003d7a;
+    button:hover {
+      background: #555;
     }
     #thanksMessage {
       margin-top: 1.5rem;
-      font-size: 1.2rem;
       color: green;
-      display: none;
+      font-size: 1.1rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    footer a {
+      margin: 0 0.5rem;
+      color: #555;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 
@@ -215,8 +104,7 @@
     <div class="hero-overlay">
       <div class="hero-text">
         <h2>概要</h2>
-        <p>このコースは、クラウド初心者を対象に、AWSの基礎から実践的なラボ演習までを網羅した全9回のオンライン講座です。<br>
-        ライブ講義と実践形式を組み合わせ、短期間でクラウドの理解と操作スキルを習得します。</p>
+        <p>このコースは、クラウド初心者を対象に、AWSの基礎から実践的なラボ演習までを網羅した全9回のオンライン講座です。ライブ講義と実践形式を組み合わせ、短期間でクラウドの理解と操作スキルを習得します。</p>
 
         <h2>目的</h2>
         <p>参加者がAWSの主要サービスと設計原則を体系的に理解し、クラウドプラクティショナー認定試験に合格できるレベルまでスキルを高めることを目指します。</p>
@@ -339,6 +227,13 @@
     });
   });
 </script>
+
+
+  <footer>
+    &copy; 2025 Saikido Cloud.
+    <a href="/privacy.html">プライバシーポリシー</a> |
+    <a href="/contact.html">お問い合わせ</a>
+  </footer>
 
 </body>
 </html>

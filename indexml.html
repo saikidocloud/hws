@@ -74,10 +74,12 @@
 
   <p style="color:#555;font-size:0.9rem;"><strong>※各セッションで実データを使った演習を実施</strong>し、最後に実践プロジェクトをまとめます。</p>
 
+    <!-- Enrollment Form -->
   <h2 id="enrollment-section">申し込み・支払い</h2>
-  <p>以下のフォームからお申し込みください。</p>
-  <p style="font-size:0.9rem;color:#555;">※後日、メールで支払い手続きとアクセス方法をお送りします。</p>
-
+  <p>以下のフォームから受講登録をお願いします。</p>
+  <p style="font-size:0.9rem;color:#555;">
+    ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
+  </p>
   <form id="enrollForm" method="POST" action="YOUR_WEB_APP_URL">
     <label for="name">お名前 *</label>
     <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
@@ -92,7 +94,9 @@
     </select>
     <button type="submit">申し込む</button>
   </form>
-  <div id="thanksMessage" role="alert">🎉 ご登録ありがとうございます！確認メールをお送りします。</div>
+  <div id="thanksMessage" style="display:none;" role="alert">
+    🎉 ご登録ありがとうございます！確認メールをお送りします。
+  </div>
 
   <footer>
     &copy; 2025 Saikido Cloud.

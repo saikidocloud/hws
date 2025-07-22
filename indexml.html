@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>AWS ML & SageMaker ハンズオン</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "Noto Sans JP", sans-serif; background: #fff; color: #333; max-width: 800px; margin: auto; padding: 1rem; line-height: 1.6; }
+    h1, h2 { color: #111; border-bottom: 2px solid #666; margin-top: 2rem; margin-bottom: 1rem; font-weight:700; }
+    h1 { font-size:1.8rem; border-bottom-width:3px; color:#003366; }
+    p, label, ul { color:#444; margin-bottom:1rem; }
+    ul { padding-left:1rem; }
+    li { margin-bottom:0.5rem; }
+    label { font-weight:600; display:block; }
+    input, select, button, textarea { font-size:1rem; font-family:inherit; width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; }
+    textarea { height:150px; resize:vertical; }
+    button { background:#003366; color:#fff; border:none; padding:0.75rem 1.5rem; margin-top:1rem; cursor:pointer; transition:background 0.3s; }
+    button:hover { background:#0051a2; }
+    #thanksMessage { display:none; margin-top:1.5rem; color:green; font-size:1.1rem; }
+    .campaign { background:#f0f4ff; border:2px solid #0051a2; margin:2rem 0; }
+    .campaign h2 { margin:0; padding:1rem; }
+    .campaign p, .campaign .price { margin:1rem; color:#444; }
+    .campaign .price del { color:#999; margin-right:0.5rem; }
+    footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #ddd; font-size:0.9rem; text-align:center; }
+    footer a { margin:0 0.5rem; color:#0051a2; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <h1>🎓 AWS ML & SageMaker ハンズオン</h1>
+
+  <section>
+    <img src="sagemaker_banner.png" alt="Amazon SageMaker" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" loading="lazy">
+  </section>
+
+  <section>
+    <h2>概要</h2>
+    <p>AI/ML に興味のある開発者・データエンジニア向けに、Amazon SageMaker を使ってデータ準備、モデル訓練、チューニング、デプロイまで一貫して学習するオンラインハンズオン講座です。</p>
+    <h2>目的</h2>
+    <p>SageMaker を活用した機械学習実務の一連の流れを体験し、クラウド上での ML 活用基盤を構築できるスキルを養います（試験対策にも有効です）。</p>
+  </section>
+
+  <h2>プログラム概要</h2>
+  <ul>
+    <li>全9セッション構成</li>
+    <li>オンライン形式（ライブ講義＋ラボ演習）</li>
+    <li>開催スケジュールは近日公開予定</li>
+    <li>1日3枠（午前／午後／夕方）、いずれか1枠をご選択ください</li>
+  </ul>
+
+  <div class="campaign">
+    <h2>🎁 キャンペーン</h2>
+    <p>早期申込で<strong>69％オフ</strong>！</p>
+    <div class="price">
+      <del>¥120000</del> → <strong>¥36900</strong>（税込）
+    </div>
+  </div>
+
+  <h2>セッション詳細</h2>
+<ul>
+  <li><strong>Day 1:</strong> ML の基礎と SageMaker Studio/Studio Lab — 理論と開発環境構築</li>
+  <li><strong>Day 2:</strong> データ準備 & Feature Engineering — SageMaker Data Wrangler 活用</li>
+  <li><strong>Day 3:</strong> モデル訓練とチューニング — ビルトインアルゴリズムとハイパーパラメータ最適化</li>
+  <li><strong>Day 4:</strong> モデル評価とデプロイ — モニタリングとエンドポイント公開</li>
+  <li><strong>Day 5:</strong> AutoML & JumpStart — ローコードモデル搭載戦略</li>
+  <li><strong>Day 6:</strong> MLOps & モデル運用 — SageMaker Pipelines と Model Monitor</li>
+  <li><strong>Day 7:</strong> ジェネレーティブAI入門 — 基礎モデルの活用</li>
+  <li><strong>Day 8:</strong> セキュリティとスケーリング — VPC 設定・推論の最適化</li>
+  <li><strong>Day 9:</strong> 総合演習 — エンドツーエンド ML アプリ構築と発表</li>
+</ul>
+
+
+  <p style="color:#555;font-size:0.9rem;"><strong>※各セッションで実データを使った演習を実施</strong>し、最後に実践プロジェクトをまとめます。</p>
+
+  <h2 id="enrollment-section">申し込み・支払い</h2>
+  <p>以下のフォームからお申し込みください。</p>
+  <p style="font-size:0.9rem;color:#555;">※後日、メールで支払い手続きとアクセス方法をお送りします。</p>
+
+  <form id="enrollForm" method="POST" action="YOUR_WEB_APP_URL">
+    <label for="name">お名前 *</label>
+    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
+    <label for="email">メールアドレス *</label>
+    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
+    <label for="session">参加希望時間帯 *</label>
+    <select id="session" name="entry.2233445566" required>
+      <option value="">選択してください</option>
+      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
+      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
+      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
+    </select>
+    <button type="submit">申し込む</button>
+  </form>
+  <div id="thanksMessage" role="alert">🎉 ご登録ありがとうございます！確認メールをお送りします。</div>
+
+  <footer>
+    &copy; 2025 Saikido Cloud.
+    <a href="/privacy.html">プライバシーポリシー</a> |
+    <a href="/contact.html">お問い合わせ</a>
+  </footer>
+
+  <script>
+    document.getElementById('enrollForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target, data = new FormData(form);
+      try {
+        const res = await fetch(form.action, { method:'POST', body:data });
+        if (res.ok) {
+          form.style.display='none';
+          document.getElementById('thanksMessage').style.display='block';
+        } else alert('送信エラーが発生しました。');
+      } catch {
+        alert('通信エラーが発生しました。');
+      }
+    });
+  </script>
+
+</body>
+</html>

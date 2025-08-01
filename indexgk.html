@@ -207,6 +207,29 @@
   <p>AWS認定講師が担当します。AWS Authorized Instructor 資格を保有し、大学でのIT系非常勤講師としての経験もあり。東京の大手証券会社やエンジニアリング企業において、システム設計・開発、インフラ構築、クラウド移行など多岐にわたるプロジェクトに従事。</p>
   <p>初心者を実務直結レベルまで育成する「実践重視」のスタイルで、全国の企業研修や一般向けハンズオン講座を多数指導しています。</p>
   </section>
+  <!-- Enrollment Form -->
+  <h2 id="enrollment-section">申し込み・支払い</h2>
+  <p>以下のフォームから受講登録をお願いします。</p>
+  <p style="font-size:0.9rem;color:#555;">
+    ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
+  </p>
+  <form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
+    <label for="name">お名前 *</label>
+    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
+    <label for="email">メールアドレス *</label>
+    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
+    <label for="session">参加希望時間帯 *</label>
+    <select id="session" name="entry.2233445566" required>
+      <option value="">選択してください</option>
+      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
+      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
+      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
+    </select>
+    <button type="submit">申し込む</button>
+  </form>
+  <div id="thanksMessage" style="display:none;" role="alert">
+    🎉 ご登録ありがとうございます！確認メールをお送りします。
+  </div>
 
   
   <!-- Footer -->

@@ -27,10 +27,11 @@
     button { background:#003366; color:#fff; border:none; padding:0.75rem 1.5rem; margin-top:1rem; cursor:pointer; transition:background 0.3s; }
     button:hover { background:#0051a2; }
     #thanksMessage { display:none; margin-top:1.5rem; color:green; font-size:1.1rem; }
-    .campaign { background:#f0f4ff; border:2px solid #0051a2; margin:2rem 0; }
+    .campaign { background:#f0f4f8; border:2px solid #0051a2; margin:2rem 0; }
     .campaign h2 { margin:0; padding:1rem; }
     .campaign p, .campaign .price { margin:1rem; color:#444; }
     .campaign .price del { color:#999; margin-right:0.5rem; }
+    .campaign .price strong { color:#003366; }
     footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #ddd; font-size:0.9rem; text-align:center; }
     footer a { margin:0 0.5rem; color:#0051a2; text-decoration:none; }
     footer a:hover { text-decoration:underline; }
@@ -40,6 +41,10 @@
       padding: 5px;
       border: 1px solid #003366;
     }
+    table { width:100%; margin-top:1rem; border-collapse:collapse; }
+    th, td { padding: 12px; text-align:left; border: 1px solid #ddd; }
+    th { background-color: #f3f8fb; font-weight: bold; }
+    td { background-color: #f9f9f9; }
   </style>
 </head>
 <body>
@@ -84,105 +89,61 @@
       </thead>
       <tbody>
         <tr>
-          <td class="gkentei">1. AIの概要と歴史</td>
-          <td>AIの定義と歴史<br>狭義のAIと一般的なAI<br>AIの主なマイルストーン</td>
-          <td>AIF-C01: AWSのAI/MLサービスの概要（SageMaker、Polly、Rekognition、Comprehend、Lex）<br>MLS-C01: AWS MLスタックの概要（SageMaker）</td>
+          <td class="gkentei">第1章　人工知能（AI）とは</td>
+          <td>AIの定義、進化と歴史</td>
+          <td>AIF-C01: AWS AIサービス（Polly, Rekognition）に関する概要</td>
         </tr>
         <tr>
-          <td class="gkentei">2. AI/MLの基礎知識</td>
-          <td>機械学習の基礎（教師あり、教師なし、強化学習）<br>一般的なアルゴリズム（線形回帰、決定木、ランダムフォレスト、KNN、SVM）<br>過学習、未学習、バイアス-バリアンストレードオフ</td>
-          <td>MLS-C01: AWSの機械学習、教師あり/教師なし/強化学習の基本（SageMaker）<br>AIF-C01: SageMakerを使用したモデル訓練と評価</td>
+          <td class="gkentei">第2章　人工知能をめぐる動向</td>
+          <td>AI技術の進化と市場動向、最新技術</td>
+          <td>AIF-C01: AWSのAIサービスの導入事例（機械学習とAIの普及）</td>
         </tr>
         <tr>
-          <td class="gkentei">3. データサイエンスと特徴量エンジニアリング</td>
-          <td>データ前処理（クリーニング、正規化、スケーリング）<br>欠損データ、外れ値、ノイズの処理<br>特徴量エンジニアリング（特徴量選択、次元削減）</td>
-          <td>MLS-C01: SageMaker Data Wranglerによるデータ前処理と特徴量エンジニアリング<br>AIF-C01: 画像の増強とCNNモデルでのデータ処理（SageMaker、Rekognition）</td>
+          <td class="gkentei">第3章　機械学習の具体的手法</td>
+          <td>教師あり学習、教師なし学習、強化学習</td>
+          <td>MLS-C01: AWS SageMakerでの教師あり学習（モデル訓練、評価）</td>
         </tr>
         <tr>
-          <td class="gkentei">4. AIモデルのデプロイ</td>
-          <td>モデル訓練と評価（ハイパーパラメータチューニング、検証・テストデータセット）<br>モデルのデプロイメント戦略</td>
-          <td>AIF-C01: SageMakerでのモデル訓練と評価、ハイパーパラメータ最適化<br>MLS-C01: SageMaker Endpointsを使用したモデルのデプロイメント</td>
+          <td class="gkentei">第4章　ディープラーニングの概要</td>
+          <td>ニューラルネットワーク、深層学習の基礎</td>
+          <td>MLS-C01: SageMakerでのディープラーニングモデル（TensorFlow, PyTorch）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第5章　ディープラーニングの要素技術</td>
+          <td>バックプロパゲーション、CNN、RNN、LSTM</td>
+          <td>MLS-C01: SageMakerを使ったCNN、RNN、LSTMの実装</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第6章　ディープラーニングの応用例</td>
+          <td>画像認識、音声認識、自然言語処理</td>
+          <td>AIF-C01: AWSのRekognition, Polly, Comprehendを用いたアプリケーション開発</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第7章　AIの社会実装に向けて</td>
+          <td>AIの活用例、産業応用の課題</td>
+          <td>MLS-C01: MLOpsと自動化（SageMaker Pipelines, Model Monitor）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第8章　AIの法律と倫理</td>
+          <td>AIに関連する法律、倫理、プライバシー問題</td>
+          <td>AIF-C01: AIの倫理と法規制に関する理解（AIの適用に関するガイドライン）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">Appendix　事例集 産業への応用</td>
+          <td>AIの産業別利用事例</td>
+          <td>AIF-C01: AWSを使った産業応用事例（自動運転、医療分野、製造業）</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <div class="campaign">
-    <h2>🎁 キャンペーン</h2>
-    <p>早期申込で<strong>69％オフ</strong>！</p>
-    <div class="price">
-      <del>¥120000</del> → <strong>¥36900</strong>（税込）
-    </div>
-    <p><a href="https://peatix.com/sales/event/4506676/tickets" target="_blank" style="display:inline-block;padding:12px 24px;background-color:#ff4b00;color:#fff;text-decoration:none;border-radius:4px;font-weight:bold;">
-      チケットを申し込む（Peatix）
-    </a>
-    </p>
-  </div>
-
-  <h2>セッション詳細</h2>
-  <ul>
-    <li><strong>Day 1:</strong> MLの基礎とSageMaker Studio — 理論と開発環境構築</li>
-    <li><strong>Day 2:</strong> データ準備 & Feature Engineering — SageMaker Data Wrangler活用</li>
-    <li><strong>Day 3:</strong> モデル訓練とチューニング — ビルトインアルゴリズムとハイパーパラメータ最適化</li>
-    <li><strong>Day 4:</strong> モデル評価とデプロイ — モニタリングとエンドポイント公開</li>
-    <li><strong>Day 5:</strong> AutoML & JumpStart — ローコードモデル搭載戦略</li>
-    <li><strong>Day 6:</strong> MLOps & モデル運用 — SageMaker Pipelines と Model Monitor</li>
-    <li><strong>Day 7:</strong> ジェネレーティブAI入門 — 基礎モデルの活用</li>
-    <li><strong>Day 8:</strong> セキュリティとスケーリング — VPC 設定・推論の最適化</li>
-    <li><strong>Day 9:</strong> 総合演習 — エンドツーエンド ML アプリ構築と発表</li>
-  </ul>
-
-  <p style="color:#555;font-size:0.9rem;"><strong>※各セッションで実データを使った演習を実施</strong>し、最後に実践プロジェクトをまとめます。</p>
-
-  <!-- Enrollment Form -->
-  <h2 id="enrollment-section">申し込み・支払い</h2>
-  <p>以下のフォームから受講登録をお願いします。</p>
-  <form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
-    <label for="name">お名前 *</label>
-    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
-    <label for="email">メールアドレス *</label>
-    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
-    <label for="session">参加希望時間帯 *</label>
-    <select id="session" name="entry.2233445566" required>
-      <option value="">選択してください</option>
-      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
-      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
-      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
-    </select>
-    <button type="submit">申し込む</button>
-  </form>
-  <div id="thanksMessage" style="display:none;" role="alert">
-    🎉 ご登録ありがとうございます！確認メールをお送りします。
-  </div>
-
-  <!-- お問い合わせセクション -->
-  <section id="contact" style="margin-top: 2rem;">
-    <h2>📍 お問い合わせ</h2>
-    <p>〒107-0061 東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
-    <p>お問い合わせフォームはこちら：<a href="contact.html">お問い合わせページ</a></p>
-  </section>
-
   <footer>
-    &copy; 2025 Saikido Cloud.
-    <a href="privacyml.html">プライバシーポリシー</a> |
-    <a href="contactml.html">お問い合わせ</a>
+    <p>&copy; 2025 G検定 & AWS AI/ML コース</p>
+    <p>
+      <a href="#about">このコースについて</a> |
+      <a href="#contact">お問い合わせ</a>
+    </p>
   </footer>
-
-  <script>
-    document.getElementById('enrollForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const form = e.target, data = new FormData(form);
-      try {
-        const res = await fetch(form.action, { method:'POST', body:data });
-        if (res.ok) {
-          form.style.display='none';
-          document.getElementById('thanksMessage').style.display='block';
-        } else alert('送信エラーが発生しました。');
-      } catch {
-        alert('通信エラーが発生しました。');
-      }
-    });
-  </script>
 
 </body>
 </html>

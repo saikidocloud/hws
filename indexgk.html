@@ -185,14 +185,29 @@
     </div>
   </section>
 
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 G検定 & AWS AI/ML コース</p>
-    <p>
-      <a href="about.html">このコースについて</a> |
-      <a href="contact.html">お問い合わせ</a>
-    </p>
+    &copy; 2025 Saikido Cloud.
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="contact.html">お問い合わせ</a>
   </footer>
+
+  
+  <!-- Form Submission Script -->
+  <script>
+    document.getElementById('enrollForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      fetch(this.action, { method:'POST', body:data })
+        .then(r => {
+          if (r.ok) {
+            this.style.display = 'none';
+            document.getElementById('thanksMessage').style.display = 'block';
+          } else alert('送信に失敗しました。');
+        })
+        .catch(() => alert('通信エラーが発生しました。'));
+    });
+  </script>
 
 </body>
 </html>

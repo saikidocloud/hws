@@ -21,9 +21,9 @@
       max-width: 800px;
       margin: auto;
       padding: 1rem;
-      line-height: 1.6;
+      line-height: 1.5;
     }
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       color: #003366;
       border-bottom: 2px solid #666;
       margin-top: 2rem;
@@ -31,21 +31,24 @@
       font-weight: 700;
     }
     section {
-      background-color: #ffffff;
-      padding: 20px;
-      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 15px 20px;
+      margin-bottom: 30px;
       border-radius: 8px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     ul {
-      padding-left: 1rem;
+      padding-left: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
     label {
       font-weight: 600;
       display: block;
+      margin-top: 1rem;
     }
     input, select, button {
       font-size: 1rem;
@@ -81,13 +84,14 @@
       border: 2px solid #0051a2;
       margin: 2rem 0;
       border-radius: 8px;
+      padding: 1rem 1.5rem;
     }
     .campaign h2 {
-      margin: 0;
-      padding: 1rem;
+      margin: 0 0 1rem 0;
+      padding: 0;
     }
     .campaign p, .campaign .price {
-      margin: 1rem;
+      margin: 0.5rem 0;
       color: #444;
     }
     .campaign .price del {
@@ -125,49 +129,41 @@
 
 <h1>🎓 AWS Cloud ハンズオン & CLF-C02試験対応</h1>
 
-<!-- Hero Image -->
 <section>
-  <img src="ot_top.jpg" alt="AWS Data Center"
-       style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
-       loading="lazy" />
+  <img src="ot_top.jpg" alt="AWS Data Center" style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);" loading="lazy" />
 </section>
 
-<!-- Overview -->
 <section>
   <h2>概要</h2>
   <p>このコースはクラウド初心者向けに、AWS基礎から実践的なラボ演習まで全9回で学ぶオンライン講座です。</p>
 
   <h2>目的</h2>
-  <p>AWSの主要サービスと設計原則を習得し、クラウド準備力を高め、急速に進化するIT分野で直面する新たな挑戦に対応できる基盤を築きます（クラウドプラクティショナー試験の学習にも有益です）。</p>
+  <p>AWSの主要サービスと設計原則を習得し、クラウド準備力を高め、IT分野の新たな挑戦に対応できる基盤を築きます（クラウドプラクティショナー試験の学習にも有益です）。</p>
 </section>
 
-<!-- Program -->
 <section>
   <h2>プログラム概要</h2>
   <ul>
     <li>全9セッション構成</li>
     <li>オンライン配信（ライブ講義＋ラボ）</li>
-    <li>開催：8/9 (土)〜8/17(日)</li>
+    <li>開催：8/9(土)〜8/17(日)</li>
     <li>1日3枠（午前・午後・夕方）、いずれか1枠を選択</li>
   </ul>
 </section>
 
-<!-- Recommended Courses -->
 <section id="related-course">
   <h2>🔗 他のおすすめ講座</h2>
   <p>▪️AWS AI/ML & SageMaker ハンズオン：<br />
-  👉 <a href="https://saikidocloud.github.io/hws/indexml.html" target="_blank" rel="noopener">AWS ML & SageMaker ハンズオン</a></p>
+    👉 <a href="https://saikidocloud.github.io/hws/indexml.html" target="_blank" rel="noopener">AWS ML & SageMaker ハンズオン</a></p>
   <p>▪️G検定 & AWS AI/ML ハイブリッドコース：<br />
-  👉 <a href="https://saikidocloud.github.io/hws/indexgk.html" target="_blank" rel="noopener">G検定 & AWS AI/ML ハイブリッドコース</a></p>
+    👉 <a href="https://saikidocloud.github.io/hws/indexgk.html" target="_blank" rel="noopener">G検定 & AWS AI/ML ハイブリッドコース</a></p>
 </section>
 
-<!-- Instructor -->
 <section id="instructor">
   <h2>講師紹介</h2>
-  <p>AWS認定講師が担当します。AWS Authorized Instructor 資格を保有し、大学でのIT系非常勤講師としての経験もあり。初心者を実務直結レベルまで育成する「実践重視」のスタイルで、全国の企業研修や一般向けハンズオン講座を多数指導しています。</p>
+  <p>AWS認定講師が担当。AWS Authorized Instructor 資格保有、大学でのIT系非常勤講師経験もあり。初心者を実務レベルまで育成する「実践重視」のスタイルで全国多数指導。</p>
 </section>
 
-<!-- Campaign -->
 <div class="campaign">
   <h2>🎁 キャンペーン</h2>
   <p>早期申込で<strong>41％オフ</strong>！</p>
@@ -181,169 +177,150 @@
   </p>
 </div>
 
-<!-- Session Detail -->
 <section>
   <h2>セッション詳細</h2>
   <ul>
-    <li><strong>Day 2:</strong> クラウド入門＆AWS概要 — 基本構造や価値を学ぶ入門セッションです。</li>
-    <li><strong>Day 2:</strong> AWSコアサービス紹介 — 核心的サービスの用途を理解します。</li>
-    <li><strong>Day 3:</strong> IAM & セキュリティ — アクセス管理と暗号化を学びます。</li>
-    <li><strong>Day 4:</strong> 請求と料金 — 料金体系とコスト戦略を解説します。</li>
-    <li><strong>Day 5:</strong> VPC & ネットワーキング — ネットワーク設計の基礎を習得します。</li>
-    <li><strong>Day 6:</strong> モニタリング & 自動スケーリング — 運用自動化を体験します。</li>
-    <li><strong>Day 7:</strong> IaC（CloudFormation/CDK） — インフラコード化で再現性を強化します。</li>
-    <li><strong>Day 8:</strong> 高可用性 & アーキテクチャ — 信頼性の高い設計を学びます。</li>
-    <li><strong>Day 9:</strong> 総復習＆試験対策 — これまでの内容をまとめ、模擬試験も実施します。</li>
+    <li><strong>Day 2:</strong> クラウド入門＆AWS概要、AWSコアサービス紹介</li>
+    <li><strong>Day 3:</strong> IAM & セキュリティ（アクセス管理・暗号化）</li>
+    <li><strong>Day 4:</strong> 請求と料金体系・コスト戦略</li>
+    <li><strong>Day 5:</strong> VPC & ネットワーキング基礎</li>
+    <li><strong>Day 6:</strong> モニタリング & 自動スケーリング運用自動化</li>
+    <li><strong>Day 7:</strong> IaC（CloudFormation/CDK）によるインフラコード化</li>
+    <li><strong>Day 8:</strong> 高可用性 & アーキテクチャ設計</li>
+    <li><strong>Day 9:</strong> 総復習＆試験対策（模擬試験含む）</li>
   </ul>
 </section>
 
-<!-- AWS Certified Cloud Practitioner Guide -->
 <section>
-  <h2>AWS Certified Cloud Practitioner (CLF-C02) </h2>
+  <h2>AWS Certified Cloud Practitioner (CLF-C02)</h2>
 
-  <section>
-    <h3>概要</h3>
-    <ul>
-      <li>AWS クラウドの価値と責任共有モデルを理解</li>
-      <li>セキュリティとベストプラクティス、Well-Architected フレームワーク</li>
-      <li>主要サービスの概要、ユースケース、料金体系を把握</li>
-    </ul>
-  </section>
+  <h3>概要</h3>
+  <ul>
+    <li>AWS クラウドの価値と責任共有モデルの理解</li>
+    <li>セキュリティ・ベストプラクティス・Well-Architected フレームワーク</li>
+    <li>主要サービス概要・ユースケース・料金体系</li>
+  </ul>
 
-  <section>
-    <h3>対象者</h3>
-    <p>クラウド未経験または経験が6ヶ月以下の個人。AWSを利用する職種に携わる全ての方。</p>
-  </section>
+  <h3>対象者</h3>
+  <p>クラウド未経験または経験6ヶ月以下。AWS利用職種に携わる方。</p>
 
-  <section>
-    <h3>試験形式</h3>
-    <ul>
-      <li>択一選択と複数選択問題</li>
-      <li>出題数：スコア対象50問 + 採点対象外15問</li>
-      <li>合格スコア：700 / 1000</li>
-    </ul>
-  </section>
+  <h3>試験形式</h3>
+  <ul>
+    <li>択一・複数選択問題</li>
+    <li>出題数：スコア対象50問＋非採点15問</li>
+    <li>合格スコア：700 / 1000</li>
+  </ul>
 
-  <section>
-    <h3>出題分野と配分</h3>
-    <ul>
-      <li>クラウドのコンセプト：24%</li>
-      <li>セキュリティとコンプライアンス：30%</li>
-      <li>クラウドテクノロジーとサービス：34%</li>
-      <li>請求、料金、サポート：12%</li>
-    </ul>
-  </section>
+  <h3>出題分野と配分</h3>
+  <ul>
+    <li>クラウドのコンセプト：24%</li>
+    <li>セキュリティとコンプライアンス：30%</li>
+    <li>クラウドテクノロジーとサービス：34%</li>
+    <li>請求、料金、サポート：12%</li>
+  </ul>
 
-  <section>
-    <h3>主なタスクステートメント（抜粋）</h3>
-    <h4>クラウドのコンセプト</h4>
-    <ul>
-      <li>AWSの利点と導入フレームワーク (CAF)</li>
-      <li>Well-Architected フレームワークの柱</li>
-      <li>クラウドエコノミクスの理解</li>
-    </ul>
+  <h3>主なタスクステートメント（抜粋）</h3>
+  <h4>クラウドのコンセプト</h4>
+  <ul>
+    <li>AWSの利点とCAF</li>
+    <li>Well-Architected フレームワークの柱</li>
+    <li>クラウドエコノミクスの理解</li>
+  </ul>
 
-    <h4>セキュリティとコンプライアンス</h4>
-    <ul>
-      <li>責任共有モデルとIAM</li>
-      <li>コンプライアンス要件とツール（CloudTrail, Security Hub等）</li>
-    </ul>
+  <h4>セキュリティとコンプライアンス</h4>
+  <ul>
+    <li>責任共有モデルとIAM</li>
+    <li>コンプライアンス要件・CloudTrail, Security Hub等</li>
+  </ul>
 
-    <h4>クラウドテクノロジーとサービス</h4>
-    <ul>
-      <li>グローバルインフラ（リージョン、AZ、エッジ）</li>
-      <li>主要サービス：EC2、S3、Lambda、RDS、VPC等</li>
-      <li>AI/ML、分析、アプリケーション統合</li>
-    </ul>
+  <h4>クラウドテクノロジーとサービス</h4>
+  <ul>
+    <li>グローバルインフラ（リージョン、AZ、エッジ）</li>
+    <li>主要サービス：EC2、S3、Lambda、RDS、VPC等</li>
+    <li>AI/ML、分析、アプリ統合</li>
+  </ul>
 
-    <h4>請求、料金、サポート</h4>
-    <ul>
-      <li>料金モデル（オンデマンド、RI、SP）</li>
-      <li>コスト管理ツール：Budgets, Cost Explorer</li>
-      <li>サポートプランとAWS公式リソース</li>
-    </ul>
-  </section>
+  <h4>請求、料金、サポート</h4>
+  <ul>
+    <li>料金モデル（オンデマンド、RI、SP）</li>
+    <li>コスト管理ツール：Budgets, Cost Explorer</li>
+    <li>サポートプラン・AWS公式リソース</li>
+  </ul>
 
-  <section>
-    <h3>範囲内の主要サービスカテゴリ（例）</h3>
-    <ul>
-      <li>コンピューティング: EC2, Lambda, Elastic Beanstalk</li>
-      <li>ストレージ: S3, EBS, Glacier, Storage Gateway</li>
-      <li>ネットワーキング: VPC, Route 53, Direct Connect</li>
-      <li>セキュリティ: IAM, KMS, WAF, Shield</li>
-      <li>データベース: RDS, DynamoDB, ElastiCache</li>
-    </ul>
-  </section>
+  <h3>主要サービスカテゴリ例</h3>
+  <ul>
+    <li>コンピューティング: EC2, Lambda, Elastic Beanstalk</li>
+    <li>ストレージ: S3, EBS, Glacier, Storage Gateway</li>
+    <li>ネットワーキング: VPC, Route 53, Direct Connect</li>
+    <li>セキュリティ: IAM, KMS, WAF, Shield</li>
+    <li>データベース: RDS, DynamoDB, ElastiCache</li>
+  </ul>
 
-  <section>
-    <h3>試験対象外の業務</h3>
-    <ul>
-      <li>コーディング</li>
-      <li>アーキテクチャ設計や実装</li>
-      <li>トラブルシューティング</li>
-      <li>パフォーマンステスト</li>
-    </ul>
-  </section>
+  <h3>試験対象外の業務</h3>
+  <ul>
+    <li>コーディング</li>
+    <li>アーキテクチャ設計・実装</li>
+    <li>トラブルシューティング</li>
+    <li>パフォーマンステスト</li>
+  </ul>
 </section>
 
-  <!-- Enrollment Form -->
-  <h2 id="enrollment-section">申し込み・支払い</h2>
-  <p>以下のフォームから受講登録をお願いします。</p>
-  <p style="font-size:0.9rem;color:#555;">
-    ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
-  </p>
-  <form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
-    <label for="name">お名前 *</label>
-    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
-    <label for="email">メールアドレス *</label>
-    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
-    <label for="session">参加希望時間帯 *</label>
-    <select id="session" name="entry.2233445566" required>
-      <option value="">選択してください</option>
-      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
-      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
-      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
-    </select>
-    <button type="submit">申し込む</button>
-  </form>
-  <div id="thanksMessage" style="display:none;" role="alert">
-    🎉 ご登録ありがとうございます！確認メールをお送りします。
-  </div>
+<h2 id="enrollment-section">申し込み・支払い</h2>
+<p>以下のフォームから受講登録をお願いします。</p>
+<p style="font-size:0.9rem;color:#555;">
+  ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
+</p>
+<form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
+  <label for="name">お名前 *</label>
+  <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎" />
+  
+  <label for="email">メールアドレス *</label>
+  <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com" />
+  
+  <label for="session">参加希望時間帯 *</label>
+  <select id="session" name="entry.2233445566" required>
+    <option value="">選択してください</option>
+    <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
+    <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
+    <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
+  </select>
+  
+  <button type="submit">申し込む</button>
+</form>
+<div id="thanksMessage" style="display:none;" role="alert">
+  🎉 ご登録ありがとうございます！確認メールをお送りします。
+</div>
 
-  <!-- 他のセクション -->
-
-<!-- お問い合わせセクション追加 -->
 <section id="contact" style="margin-top: 2rem;">
-  <h2>📍 お問い合わせ</h2
-  〒107-0061 東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
+  <h2>📍 お問い合わせ</h2>
+  <p>〒107-0061 東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
   <p>お問い合わせフォームはこちら：<a href="contact.html">お問い合わせページ</a></p>
 </section>
 
+<footer>
+  &copy; 2025 Saikido Cloud.
+  <a href="privacy.html">プライバシーポリシー</a> |
+  <a href="contact.html">お問い合わせ</a>
+</footer>
 
-  
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Saikido Cloud.
-    <a href="privacy.html">プライバシーポリシー</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </footer>
-
-  
-  <!-- Form Submission Script -->
-  <script>
-    document.getElementById('enrollForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const data = new FormData(this);
-      fetch(this.action, { method:'POST', body:data })
-        .then(r => {
-          if (r.ok) {
-            this.style.display = 'none';
-            document.getElementById('thanksMessage').style.display = 'block';
-          } else alert('送信に失敗しました。');
-        })
-        .catch(() => alert('通信エラーが発生しました。'));
+<script>
+  const form = document.getElementById('enrollForm');
+  const thanksMessage = document.getElementById('thanksMessage');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      thanksMessage.style.display = 'block';
+      form.reset();
+    }).catch(() => {
+      alert('送信に失敗しました。時間をおいて再度お試しください。');
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>

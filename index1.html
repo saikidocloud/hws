@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD9CJSPD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBD9CJSPD4');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS Cloud ハンズオン</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      background: #fff;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #003366;
+      border-bottom: 2px solid #666;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    section {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-left: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+    }
+    input, select, button {
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      margin-top: 0.25rem;
+      border-radius: 4px;
+    }
+    button {
+      background: #003366;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #0051a2;
+    }
+    #thanksMessage {
+      margin-top: 1.5rem;
+      color: green;
+      font-size: 1.1rem;
+    }
+    .campaign {
+      background: #f0f4ff;
+      border: 2px solid #0051a2;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .campaign h2 {
+      margin: 0;
+      padding: 1rem;
+    }
+    .campaign p, .campaign .price {
+      margin: 1rem;
+      color: #444;
+    }
+    .campaign .price del {
+      color: #999;
+      margin-right: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    footer a {
+      margin: 0 0.5rem;
+      color: #0051a2;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Notice -->
+<div style="background-color:#fff3cd; border-left:8px solid #ffa500; padding:1rem; margin-bottom:1.5rem; font-weight:bold; color:#333;">
+  🎯 <strong>今だけ限定割引！</strong><br />
+  以下のフォームから <strong>今すぐお席を確保</strong> いただくだけでOK！<br />
+  <strong>お支払いは講座開始前で大丈夫です。</strong><br />
+  <a href="#enrollment-section" style="display:inline-block; margin-top:0.5rem; padding:0.5rem 1rem; background-color:#ff4b00; color:#fff; border-radius:4px; text-decoration:none; font-weight:bold;">
+    今すぐ申し込む
+  </a>
+</div>
+
+<h1>🎓 AWS Cloud ハンズオン</h1>
+
+<!-- Hero Image -->
+<section>
+  <img src="ot_top.jpg" alt="AWS Data Center"
+       style="width:100%; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+       loading="lazy" />
+</section>
+
+<!-- Overview -->
+<section>
+  <h2>概要</h2>
+  <p>このコースはクラウド初心者向けに、AWS基礎から実践的なラボ演習まで全9回で学ぶオンライン講座です。</p>
+
+  <h2>目的</h2>
+  <p>AWSの主要サービスと設計原則を習得し、クラウド準備力を高め、急速に進化するIT分野で直面する新たな挑戦に対応できる基盤を築きます（クラウドプラクティショナー試験の学習にも有益です）。</p>
+</section>
+
+<!-- Program -->
+<section>
+  <h2>プログラム概要</h2>
+  <ul>
+    <li>全9セッション構成</li>
+    <li>オンライン配信（ライブ講義＋ラボ）</li>
+    <li>開催：8/9 (土)〜8/17(日)</li>
+    <li>1日3枠（午前・午後・夕方）、いずれか1枠を選択</li>
+  </ul>
+</section>
+
+<!-- Recommended Courses -->
+<section id="related-course">
+  <h2>🔗 他のおすすめ講座</h2>
+  <p>▪️AWS AI/ML & SageMaker ハンズオン：<br />
+  👉 <a href="https://saikidocloud.github.io/hws/indexml.html" target="_blank" rel="noopener">AWS ML & SageMaker ハンズオン</a></p>
+  <p>▪️G検定 & AWS AI/ML ハイブリッドコース：<br />
+  👉 <a href="https://saikidocloud.github.io/hws/indexgk.html" target="_blank" rel="noopener">G検定 & AWS AI/ML ハイブリッドコース</a></p>
+</section>
+
+<!-- Instructor -->
+<section id="instructor">
+  <h2>講師紹介</h2>
+  <p>AWS認定講師が担当します。AWS Authorized Instructor 資格を保有し、大学でのIT系非常勤講師としての経験もあり。初心者を実務直結レベルまで育成する「実践重視」のスタイルで、全国の企業研修や一般向けハンズオン講座を多数指導しています。</p>
+</section>
+
+<!-- Campaign -->
+<div class="campaign">
+  <h2>🎁 キャンペーン</h2>
+  <p>早期申込で<strong>41％オフ</strong>！</p>
+  <div class="price">
+    <del>¥90,000</del> → <strong>¥36,900</strong>（税込）
+  </div>
+  <p>
+    <a href="https://peatix.com/sales/event/4519547/tickets" target="_blank" rel="noopener" style="display:inline-block; padding:12px 24px; background-color:#ff4b00; color:#fff; text-decoration:none; border-radius:4px; font-weight:bold;">
+      申し込む（Peatix）
+    </a>
+  </p>
+</div>
+
+<!-- Session Detail -->
+<section>
+  <h2>セッション詳細</h2>
+  <ul>
+    <li><strong>Day 2:</strong> クラウド入門＆AWS概要 — 基本構造や価値を学ぶ入門セッションです。</li>
+    <li><strong>Day 2:</strong> AWSコアサービス紹介 — 核心的サービスの用途を理解します。</li>
+    <li><strong>Day 3:</strong> IAM & セキュリティ — アクセス管理と暗号化を学びます。</li>
+    <li><strong>Day 4:</strong> 請求と料金 — 料金体系とコスト戦略を解説します。</li>
+    <li><strong>Day 5:</strong> VPC & ネットワーキング — ネットワーク設計の基礎を習得します。</li>
+    <li><strong>Day 6:</strong> モニタリング & 自動スケーリング — 運用自動化を体験します。</li>
+    <li><strong>Day 7:</strong> IaC（CloudFormation/CDK） — インフラコード化で再現性を強化します。</li>
+    <li><strong>Day 8:</strong> 高可用性 & アーキテクチャ — 信頼性の高い設計を学びます。</li>
+    <li><strong>Day 9:</strong> 総復習＆試験対策 — これまでの内容をまとめ、模擬試験も実施します。</li>
+  </ul>
+</section>
+
+<!-- AWS Certified Cloud Practitioner Guide -->
+<section>
+  <h2>AWS Certified Cloud Practitioner (CLF-C02) 試験ガイド</h2>
+
+  <section>
+    <h3>概要</h3>
+    <ul>
+      <li>AWS クラウドの価値と責任共有モデルを理解</li>
+      <li>セキュリティとベストプラクティス、Well-Architected フレームワーク</li>
+      <li>主要サービスの概要、ユースケース、料金体系を把握</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>対象者</h3>
+    <p>クラウド未経験または経験が6ヶ月以下の個人。AWSを利用する職種に携わる全ての方。</p>
+  </section>
+
+  <section>
+    <h3>試験形式</h3>
+    <ul>
+      <li>択一選択と複数選択問題</li>
+      <li>出題数：スコア対象50問 + 採点対象外15問</li>
+      <li>合格スコア：700 / 1000</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>出題分野と配分</h3>
+    <ul>
+      <li>クラウドのコンセプト：24%</li>
+      <li>セキュリティとコンプライアンス：30%</li>
+      <li>クラウドテクノロジーとサービス：34%</li>
+      <li>請求、料金、サポート：12%</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>主なタスクステートメント（抜粋）</h3>
+    <h4>クラウドのコンセプト</h4>
+    <ul>
+      <li>AWSの利点と導入フレームワーク (CAF)</li>
+      <li>Well-Architected フレームワークの柱</li>
+      <li>クラウドエコノミクスの理解</li>
+    </ul>
+
+    <h4>セキュリティとコンプライアンス</h4>
+    <ul>
+      <li>責任共有モデルとIAM</li>
+      <li>コンプライアンス要件とツール（CloudTrail, Security Hub等）</li>
+    </ul>
+
+    <h4>クラウドテクノロジーとサービス</h4>
+    <ul>
+      <li>グローバルインフラ（リージョン、AZ、エッジ）</li>
+      <li>主要サービス：EC2、S3、Lambda、RDS、VPC等</li>
+      <li>AI/ML、分析、アプリケーション統合</li>
+    </ul>
+
+    <h4>請求、料金、サポート</h4>
+    <ul>
+      <li>料金モデル（オンデマンド、RI、SP）</li>
+      <li>コスト管理ツール：Budgets, Cost Explorer</li>
+      <li>サポートプランとAWS公式リソース</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>範囲内の主要サービスカテゴリ（例）</h3>
+    <ul>
+      <li>コンピューティング: EC2, Lambda, Elastic Beanstalk</li>
+      <li>ストレージ: S3, EBS, Glacier, Storage Gateway</li>
+      <li>ネットワーキング: VPC, Route 53, Direct Connect</li>
+      <li>セキュリティ: IAM, KMS, WAF, Shield</li>
+      <li>データベース: RDS, DynamoDB, ElastiCache</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>試験対象外の業務</h3>
+    <ul>
+      <li>コーディング</li>
+      <li>アーキテクチャ設計や実装</li>
+      <li>トラブルシューティング</li>
+      <li>パフォーマンステスト</li>
+    </ul>
+  </section>
+</section>
+
+<!-- Enrollment Section -->
+<section id="enrollment-section">
+  <h2>お申し込みフォーム</h2>
+  <form id="enrollForm" novalidate>
+    <label for="name">お名前 (必須):</label>
+    <input type="text" id="name" name="name" required aria-required="true" />
+
+    <label for="email">メールアドレス (必須):</label>
+    <input type="email" id="email" name="email" required aria-required="true" />
+
+    <label for="session">参加希望セッション (必須):</label>
+    <select id="session" name="session" required aria-required="true">
+      <option value="">選択してください</option>
+      <option value="Day 2 - クラウド入門＆AWS概要">Day 2 - クラウド入門＆AWS概要</option>
+      <option value="Day 2 - AWSコアサービス紹介">Day 2 - AWSコアサービス紹介</option>
+      <option value="Day 3 - IAM & セキュリティ">Day 3 - IAM & セキュリティ</option>
+      <option value="Day 4 - 請求と料金">Day 4 - 請求と料金</option>
+      <option value="Day 5 - VPC & ネットワーキング">Day 5 - VPC & ネットワーキング</option>
+      <option value="Day 6 - モニタリング & 自動スケーリング">Day 6 - モニタリング & 自動スケーリング</option>
+      <option value="Day 7 - IaC（CloudFormation/CDK）">Day 7 - IaC（CloudFormation/CDK）</option>
+      <option value="Day 8 - 高可用性 & アーキテクチャ">Day 8 - 高可用性 & アーキテクチャ</option>
+      <option value="Day 9 - 総復習＆試験対策">Day 9 - 総復習＆試験対策</option>
+    </select>
+
+    <button type="submit">送信</button>
+  </form>
+  <div id="thanksMessage" role="alert" aria-live="polite" style="display:none;">
+    お申し込みありがとうございます！後ほどメールでご連絡いたします。
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 AWS Cloud ハンズオン All rights reserved.</p>
+  <p>
+    <a href="https://twitter.com/saikidocloud" target="_blank" rel="noopener">Twitter</a> |
+    <a href="https://github.com/saikidocloud" target="_blank" rel="noopener">GitHub</a> |
+    <a href="https://saikidocloud.github.io/" target="_blank" rel="noopener">Official Site</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById('enrollForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Simple validation already handled by required attributes
+
+    // Show thank you message
+    document.getElementById('thanksMessage').style.display = 'block';
+
+    // Reset form fields
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

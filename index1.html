@@ -123,7 +123,7 @@
   </a>
 </div>
 
-<h1>🎓 AWS Cloud ハンズオン</h1>
+<h1>🎓 AWS Cloud ハンズオン & CLF-C02試験対応</h1>
 
 <!-- Hero Image -->
 <section>
@@ -199,7 +199,7 @@
 
 <!-- AWS Certified Cloud Practitioner Guide -->
 <section>
-  <h2>AWS Certified Cloud Practitioner (CLF-C02) 試験ガイド</h2>
+  <h2>AWS Certified Cloud Practitioner (CLF-C02) </h2>
 
   <section>
     <h3>概要</h3>
@@ -286,59 +286,64 @@
   </section>
 </section>
 
-<!-- Enrollment Section -->
-<section id="enrollment-section">
-  <h2>お申し込みフォーム</h2>
-  <form id="enrollForm" novalidate>
-    <label for="name">お名前 (必須):</label>
-    <input type="text" id="name" name="name" required aria-required="true" />
-
-    <label for="email">メールアドレス (必須):</label>
-    <input type="email" id="email" name="email" required aria-required="true" />
-
-    <label for="session">参加希望セッション (必須):</label>
-    <select id="session" name="session" required aria-required="true">
+  <!-- Enrollment Form -->
+  <h2 id="enrollment-section">申し込み・支払い</h2>
+  <p>以下のフォームから受講登録をお願いします。</p>
+  <p style="font-size:0.9rem;color:#555;">
+    ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
+  </p>
+  <form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
+    <label for="name">お名前 *</label>
+    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
+    <label for="email">メールアドレス *</label>
+    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
+    <label for="session">参加希望時間帯 *</label>
+    <select id="session" name="entry.2233445566" required>
       <option value="">選択してください</option>
-      <option value="Day 2 - クラウド入門＆AWS概要">Day 2 - クラウド入門＆AWS概要</option>
-      <option value="Day 2 - AWSコアサービス紹介">Day 2 - AWSコアサービス紹介</option>
-      <option value="Day 3 - IAM & セキュリティ">Day 3 - IAM & セキュリティ</option>
-      <option value="Day 4 - 請求と料金">Day 4 - 請求と料金</option>
-      <option value="Day 5 - VPC & ネットワーキング">Day 5 - VPC & ネットワーキング</option>
-      <option value="Day 6 - モニタリング & 自動スケーリング">Day 6 - モニタリング & 自動スケーリング</option>
-      <option value="Day 7 - IaC（CloudFormation/CDK）">Day 7 - IaC（CloudFormation/CDK）</option>
-      <option value="Day 8 - 高可用性 & アーキテクチャ">Day 8 - 高可用性 & アーキテクチャ</option>
-      <option value="Day 9 - 総復習＆試験対策">Day 9 - 総復習＆試験対策</option>
+      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
+      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
+      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
     </select>
-
-    <button type="submit">送信</button>
+    <button type="submit">申し込む</button>
   </form>
-  <div id="thanksMessage" role="alert" aria-live="polite" style="display:none;">
-    お申し込みありがとうございます！後ほどメールでご連絡いたします。
+  <div id="thanksMessage" style="display:none;" role="alert">
+    🎉 ご登録ありがとうございます！確認メールをお送りします。
   </div>
+
+  <!-- 他のセクション -->
+
+<!-- お問い合わせセクション追加 -->
+<section id="contact" style="margin-top: 2rem;">
+  <h2>📍 お問い合わせ</h2
+  〒107-0061 東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
+  <p>お問い合わせフォームはこちら：<a href="contact.html">お問い合わせページ</a></p>
 </section>
 
-<footer>
-  <p>© 2025 AWS Cloud ハンズオン All rights reserved.</p>
-  <p>
-    <a href="https://twitter.com/saikidocloud" target="_blank" rel="noopener">Twitter</a> |
-    <a href="https://github.com/saikidocloud" target="_blank" rel="noopener">GitHub</a> |
-    <a href="https://saikidocloud.github.io/" target="_blank" rel="noopener">Official Site</a>
-  </p>
-</footer>
 
-<script>
-  document.getElementById('enrollForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+  
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Saikido Cloud.
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </footer>
 
-    // Simple validation already handled by required attributes
-
-    // Show thank you message
-    document.getElementById('thanksMessage').style.display = 'block';
-
-    // Reset form fields
-    this.reset();
-  });
-</script>
+  
+  <!-- Form Submission Script -->
+  <script>
+    document.getElementById('enrollForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      fetch(this.action, { method:'POST', body:data })
+        .then(r => {
+          if (r.ok) {
+            this.style.display = 'none';
+            document.getElementById('thanksMessage').style.display = 'block';
+          } else alert('送信に失敗しました。');
+        })
+        .catch(() => alert('通信エラーが発生しました。'));
+    });
+  </script>
 
 </body>
 </html>

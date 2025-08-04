@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD9CJSPD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JBD9CJSPD4');
+  </script>
+  <meta charset="utf-8" />
+  <title>G検定 & AWS AI/ML </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "Noto Sans JP", sans-serif; background: #fff; color: #333; max-width: 1000px; margin: auto; padding: 1rem; line-height: 1.6; }
+    h1, h2 { color: #111; border-bottom: 2px solid #666; margin-top: 2rem; margin-bottom: 1rem; font-weight:700; }
+    h1 { font-size:1.8rem; border-bottom-width:3px; color:#003366; }
+    p, label, ul { color:#444; margin-bottom:1rem; }
+    ul { padding-left:1rem; }
+    li { margin-bottom:0.5rem; }
+    label { font-weight:600; display:block; }
+    input, select, button, textarea { font-size:1rem; font-family:inherit; width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box; }
+    textarea { height:150px; resize:vertical; }
+    button { background:#003366; color:#fff; border:none; padding:0.75rem 1.5rem; margin-top:1rem; cursor:pointer; transition:background 0.3s; }
+    button:hover { background:#0051a2; }
+    #thanksMessage { display:none; margin-top:1.5rem; color:green; font-size:1.1rem; }
+    .campaign { background:#f0f4f8; border:2px solid #0051a2; margin:2rem 0; }
+    .campaign h2 { margin:0; padding:1rem; }
+    .campaign p, .campaign .price { margin:1rem; color:#444; }
+    .campaign .price del { color:#999; margin-right:0.5rem; }
+    .campaign .price strong { color:#003366; }
+    footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #ddd; font-size:0.9rem; text-align:center; }
+    footer a { margin:0 0.5rem; color:#0051a2; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+    .gkentei {
+      background-color: #f3f8fb;
+      font-weight: bold;
+      padding: 5px;
+
+    }
+    table { width:100%; margin-top:1rem; border-collapse:collapse; }
+    th, td { padding: 12px; text-align:left; border: 1px solid #ddd; }
+    th { background-color: #f3f8fb; font-weight: bold; }
+    td { background-color: #ffffff; }
+  </style>
+</head>
+<body>
+
+  
+  <h1>🎓 G検定 & AWS AI/ML </h1>
+
+  <section>
+    <img src="gk2.png" alt="Amazon SageMaker" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" loading="lazy">
+  </section>
+
+<!-- Hero Section -->
+<section style="
+  background: linear-gradient(120deg, #003366, #0051a2);
+  color: #ffffff;
+  padding: 1.5rem 1.5rem;
+  border-radius: 12px;
+
+">
+
+  <p style="
+
+
+    margin: 0 auto;
+    color: #ffffff;
+
+  ">
+    この講座では、G検定必要な知識をAWSの機械学習（AIF-C01、MLS-C01）コースと一部組み合わせて学びます。<br><br>AWSの各種ツールやサービスを利用しながら、AIの基礎から高度なテクニックまでを網羅的にカバーします。<br>
+    <br>初心者からでも安心して始められる、実践重視のハイブリッドコースです。
+
+</section>
+
+  <!-- 🔽 ここに追加 -->
+<div style="background-color:#fff3cd; border-left:8px solid #ffa500; padding:1rem; margin-bottom:1.5rem; font-weight:bold; color:#333;">
+  🎯 <strong>今だけ限定割引！</strong><br>
+  以下のフォームから <strong>今すぐお席を確保</strong> いただくだけでOK！<br>
+  <strong>お支払いは講座開始前で大丈夫です。</strong><br>
+  <a href="#enrollment-section" style="display:inline-block; margin-top:0.5rem; padding:0.5rem 1rem; background-color:#ff4b00; color:#fff; border-radius:4px; text-decoration:none; font-weight:bold;">
+    今すぐ申し込む
+  </a>
+</div>
+
+  
+<!-- 🔼 追加ここまで -->
+
+<!-- Program Overview Section -->
+<section style="
+  background: linear-gradient(120deg, #003366, #0051a2);
+  color: #ffffff;
+  padding: 0.25rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 1rem 0;
+  text-align: left;
+">
+
+  <h2 style="
+    font-size: 1.1rem;
+
+        color: #ffffff;
+  ">
+    📘 プログラム概要
+  </h2>
+
+  <ul style="list-style-type: disc; padding-left: 1rem; line-height: 1.1; font-size: 1rem;    color: #ffffff;">
+    <li>全9セッション構成</li>
+    <li>オンライン形式（ライブ講義＋ラボ演習）</li>
+    <li>開催スケジュール：8/9(土)〜9/6(土)</li>
+    <li>週二回、1日3枠（午前・午後・夕方）、いずれか1枠を選択</li>
+  </ul>
+
+</section>
+
+  
+      <div class="campaign">
+      <h2>🎁 キャンペーン</h2>
+      <div class="price">
+        <del>¥120,000</del> → <strong>¥36,900</strong>（初回のお支払い）
+      </div>
+      <p><a href="https://peatix.com/sales/event/4520259/tickets" target="_blank" style="display:inline-block;padding:12px 24px;background-color:#ff4b00;color:#fff;text-decoration:none;border-radius:4px;font-weight:bold;">
+        申し込む（Peatix）
+      </a>
+      </p>
+    </div>
+  
+  <section id="gkentei-syllabus">
+    <h2>G検定のトピックとAWSコースのマッピング</h2>
+    <p>以下の表では、G検定の各トピックと、AWSのAI/ML関連コース（AIF-C01 & MLS-C01）に関連する学習内容をマッピングしています。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>G検定のトピック</th>
+          <th>サブトピック</th>
+          <th>AWS コースと関連トピック</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="gkentei">第1章　人工知能（AI）とは</td>
+          <td>AIの定義、進化と歴史</td>
+          <td>AIF-C01: AWS AIサービス（Polly, Rekognition）に関する概要</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第2章　人工知能をめぐる動向</td>
+          <td>AI技術の進化と市場動向、最新技術</td>
+          <td>AIF-C01: AWSのAIサービスの導入事例（機械学習とAIの普及）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第3章　機械学習の具体的手法</td>
+          <td>教師あり学習、教師なし学習、強化学習</td>
+          <td>MLS-C01: AWS SageMakerでの教師あり学習（モデル訓練、評価）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第4章　ディープラーニングの概要</td>
+          <td>ニューラルネットワーク、深層学習の基礎</td>
+          <td>MLS-C01: SageMakerでのディープラーニングモデル（TensorFlow, PyTorch）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第5章　ディープラーニングの要素技術</td>
+          <td>バックプロパゲーション、CNN、RNN、LSTM</td>
+          <td>MLS-C01: SageMakerを使ったCNN、RNN、LSTMの実装</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第6章　ディープラーニングの応用例</td>
+          <td>画像認識、音声認識、自然言語処理</td>
+          <td>AIF-C01: AWSのRekognition, Polly, Comprehendを用いたアプリケーション開発</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第7章　AIの社会実装に向けて</td>
+          <td>AIの活用例、産業応用の課題</td>
+          <td>MLS-C01: MLOps、SageMaker Pipelinesでの運用管理</td>
+        </tr>
+        <tr>
+          <td class="gkentei">第8章　AIの法律と倫理</td>
+          <td>倫理的課題、法的問題</td>
+          <td>AIF-C01: AIの倫理と法規制に関する理解（AI適用ガイドライン）</td>
+        </tr>
+        <tr>
+          <td class="gkentei">Appendix　事例集 産業への応用</td>
+          <td>産業別AI活用事例</td>
+          <td>AIF-C01: 自動運転、医療分野でのAWS活用事例</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+<!-- Links Section -->
+<section id="related-links" style="margin-top: 2rem;">
+  <h2>参考リンク</h2>
+  <ul>
+    <li><a href="https://www.jdla.org/news/20240514001/" target="_blank">G検定試験概要と詳細</a></li>
+   </ul>
+</section>
+
+  <!-- G検定 Exam Details Section -->
+<section id="g-kentei-exam">
+  <h2>G検定 2025年試験日程</h2>
+  <p>次回のG検定（2025年）は、以下の日程で開催されます：</p>
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse: collapse; background-color:#f9f9f9; text-align:left;">
+    <thead>
+      <tr>
+        <th style="background-color:#003366; color:white;">試験開催日</th>
+        <th style="background-color:#003366; color:white;">申込期間</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025年11月7日(金) 16:00～18:00</td>
+        <td rowspan="2">【個人】2025年9月12日(金) 13:00～2025年10月30日(木) 23:59<br>【団体】2025年9月12日(金) 13:00～2025年10月23日(木) 23:59</td>
+      </tr>
+      <tr>
+        <td>2025年11月8日(土) 13:00～15:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 1rem; font-size: 0.9rem; color: #555;">最新情報については、公式サイトをご確認ください: <a href="https://www.jdla.org/certificate/" target="_blank">https://www.jdla.org/certificate/</a></p>
+</section>
+
+
+      <section id="related-course" style="margin-top: 2rem;">
+  <h2>🔗 他のおすすめ講座</h2>
+  <p>
+    ▪️AWS AI/ML & SageMaker ハンズオン、開発者向けの内容に興味がある方は、以下の講座もご覧ください：<br>
+    👉 <a href="https://saikidocloud.github.io/hws/indexml.html">AWS ML & SageMaker ハンズオン</a>
+  </p>
+  <p>
+    ▪️クラウド基礎やAWS Cloud ハンズオン、開発者向けの内容に興味がある方は、以下の講座もご覧ください：<br>
+    👉 <a href="https://saikidocloud.github.io/hws/index.html">AWS Cloud ハンズオン</a>
+  </p>
+ </section>
+
+        
+ </section>
+  
+  <section id="instructor">
+  <h2>講師紹介</h2>
+  <p>AWS認定講師が担当します。AWS Authorized Instructor 資格を保有し、大学でのIT系非常勤講師としての経験もあり。東京の大手証券会社やエンジニアリング企業において、システム設計・開発、インフラ構築、クラウド移行など多岐にわたるプロジェクトに従事。</p>
+  <p>初心者を実務直結レベルまで育成する「実践重視」のスタイルで、全国の企業研修や一般向けハンズオン講座を多数指導しています。</p>
+  </section>
+
+
+  <section id="pricing">
+    <h2>費用</h2>
+    <p>通常料金：¥120,000（税込） → 早期割引適用後 ¥63,000（税込）</p>
+    <p><strong>お支払い方法：</strong><br>
+      初回：¥36,900（コース開始前に支払い、初回のお支払い）<br>
+      残額：¥26,100（コース終了まで、分割払いオプションあり）<br>
+      <strong>分割払いを希望される場合は、事前にご連絡ください。</strong></p>
+    
+
+<p>※ 銀行振込または<span style="color: #FF6347; font-weight: bold;">PayPay</span>でのお支払いをご希望の方は、お手数ですが 
+   <a href="contact.html" style="color: #FF6347; font-weight: bold; text-decoration: none;">お問い合わせ</a>からご連絡ください。 
+   お支払い詳細を確認のため、メールでお送りいたします。</p>
+
+    
+  </section>
+
+  <!-- Enrollment Form -->
+  <h2 id="enrollment-section">申し込み・支払い</h2>
+  <p>以下のフォームから受講登録をお願いします。</p>
+  <p style="font-size:0.9rem;color:#555;">
+    ※ご登録のメール宛に<strong>お支払い方法・セッション詳細・コースアクセス情報</strong>をお送りします。
+  </p>
+  <form id="enrollForm" method="POST" action="https://script.google.com/macros/s/AKfycby-bta1daYIqysXyUyUGLwVoEMhwxmOnAMPwUHWA8kPvq0EdUUp2MuNp04GUQ19i8RP/exec">
+    <label for="name">お名前 *</label>
+    <input type="text" id="name" name="entry.1234567890" required placeholder="山田 太郎">
+    <label for="email">メールアドレス *</label>
+    <input type="email" id="email" name="entry.0987654321" required placeholder="example@example.com">
+    <label for="session">参加希望時間帯 *</label>
+    <select id="session" name="entry.2233445566" required>
+      <option value="">選択してください</option>
+      <option value="午前 10:00‑12:00">午前 10:00‑12:00</option>
+      <option value="午後 14:00‑16:00">午後 14:00‑16:00</option>
+      <option value="夕方 19:00‑21:00">夕方 19:00‑21:00</option>
+    </select>
+    <button type="submit">申し込む</button>
+  </form>
+  <div id="thanksMessage" style="display:none;" role="alert">
+    🎉 ご登録ありがとうございます！確認メールをお送りします。
+  </div>
+
+  <!-- お問い合わせセクション追加 -->
+<section id="contact" style="margin-top: 2rem;">
+  〒107-0061 東京都港区北青山一丁目3番1号 アールキューブ青山3階</p>
+</section>
+  
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Saikido Cloud.
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </footer>
+
+  
+  <!-- Form Submission Script -->
+  <script>
+    document.getElementById('enrollForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      fetch(this.action, { method:'POST', body:data })
+        .then(r => {
+          if (r.ok) {
+            this.style.display = 'none';
+            document.getElementById('thanksMessage').style.display = 'block';
+          } else alert('送信に失敗しました。');
+        })
+        .catch(() => alert('通信エラーが発生しました。'));
+    });
+  </script>
+
+</body>
+</html>
